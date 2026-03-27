@@ -1,0 +1,61 @@
+Processuss de vérification du fichier YB
+	- Lignes sans email
+	- lignes sans code activité
+	- Lignes sans nom, prénom
+	- Lignes sans code activité
+	- ...
+	
+Processus d"intégration du fichier YB
+	- Crée l'adhérent
+		○ Si le mail existe alors Maj des datas
+			§ Sinon crée l'adhérent
+		○ Si pas de mail alors crée l'adhérent, log une erreur
+		○ Civilité
+		○ Téléphone : intégrer mobile, si pas de mobile intégrer téléphone sinon rien ou bien on concatene
+		○ email
+		○ Nom
+		○ Prénom
+		○ Date de naissance
+		○ Code postal
+		○ Ville
+
+	- Pour les lignes Autres (code A05)
+		○ S'il n''y a qu'un montant ADH>0 alors la ligne est une adhésion simple
+		○ Si les montants sont à 0 log une erreur
+
+	- Crée l'adhésion
+		○ Si le montant de l'adhésion est >0 
+			§ crée une ligne d'inscription : de type  adhésion (
+				□ date d'inscription=date d'adhésion
+				□ montant de l'adhésion, 
+				□ activité 'adhésion'
+				□ Date début = date adhésion 
+				□ Date fin = "31/08 ", au prochain mois d'aout.
+			)
+	- Crée les inscriptions
+		○ Pour chaque ligne 
+		○ Crée une ligne inscription
+			§ Code de l'activité
+			§ Date d'inscription = date d'adhésion
+			§ Montant de l'activité
+			§ Date début : Date du
+			§ Date fin : 31/08
+		○ Ligne Autre -> question pour YB?
+	- Crée le règlement
+		○ Est-il possible de distinguer plusieurs paiements
+			§ S'ils ont des modes de paiement différents
+			§ S'ils ont des dates "d'adhésion" différents
+		○ Si un paiement
+			§ Crée le paiement,
+				□ Date du paiement
+				□ Mode de paiement
+				□ Montant du paiement
+				□ Relier aux lignes d'inscription concernées
+		○ Si plusieurs paiements
+		
+Processus de mise à jour à partir du fichier YB
+	- Comment détecter que la ligne est déjà présente
+	- Comment détecter que la ligne a été modifiée
+
+Ajouter les animateurs
+	- Onglet du fichier Excel

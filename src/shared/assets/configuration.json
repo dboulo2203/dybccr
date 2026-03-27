@@ -1,0 +1,80 @@
+{
+  "BrandTitle": "CCR - DYB V2",
+  "wsUrlformel": "https://kusala.fr/dolibarrccr/api/index.php/",
+  "version": "Powered by Cercle celtique de Rennes  - DYB Application - v 1.0.0 - 22/03/2026",
+  "leftMenu": [
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-box-arrow-in-right'></i>",
+      "menuItemid": "login",
+      "menuItemName": "Log",
+      "menuItemAction": "functionCall",
+      "menuItemLink": "loginViewDisplay()"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-brightness-high'></i>",
+      "menuItemid": "theme",
+      "menuItemName": "Theme",
+      "menuItemAction": "functionCall",
+      "menuItemLink": "toogleTheme()"
+    },
+    {
+      "menuItemType": "hr",
+      "menuItemIcon": "",
+      "menuItemid": "",
+      "menuItemName": "",
+      "menuItemAction": "",
+      "menuItemLink": ""
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-person'></i>",
+      "menuItemid": "Recherche",
+      "menuItemName": "Recherche adhérent",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/search"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-list-ul'></i>",
+      "menuItemid": "Course",
+      "menuItemName": "Activité",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/course"
+    },
+    {
+      "menuItemType": "hr",
+      "menuItemIcon": "",
+      "menuItemid": "",
+      "menuItemName": "",
+      "menuItemAction": "",
+      "menuItemLink": ""
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-list-ul'></i>",
+      "menuItemid": "registerFrom",
+      "menuItemName": "Formulaire adhésion",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/webregister"
+    },
+    {
+      "menuItemType": "hr",
+      "menuItemIcon": "",
+      "menuItemid": "",
+      "menuItemName": "",
+      "menuItemAction": "",
+      "menuItemLink": ""
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-house'></i>",
+      "menuItemid": "Documentation",
+      "menuItemName": "Documentation",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/docu/docu.html"
+    }
+  ]
+  
+}

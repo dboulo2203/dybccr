@@ -1,0 +1,15 @@
+{
+    "name": "cercle/adhesion",
+    "description": "Gestion adhésions",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^5.4"
+    },
+    "config": {
+        "disable-tls": false,
+        "secure-http": true,
+        "cafile": "c:/dominique/xampp/phpMyAdmin/vendor/composer/ca-bundle/res/cacert.pem"
+    },
+    "repositories": {
+    }
+}

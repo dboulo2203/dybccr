@@ -1,0 +1,123 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+// https://dbdiagram.io/d/Database-cc-rennes-684d86293cc77757c8e217fb
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table activites {
+  act_id int 
+  act_ext_key varchar [ note: "clé externe type D02"] 
+  act_libelle varchar [not null]
+  act_mode_rem varchar [note : "Mode de rémunération du prof a l'h ou au 1/4/ h/élève"] 
+  dom_id int
+  tyac_id int 
+}
+
+Table domaines {
+  dom_id int
+  dom_libelle varchar [note : "Danse, "]
+}
+
+Table typeactivite {
+  tyac_id int 
+  tyac_libelle varchar [note : "cours, événement,adhésion, stage, don, Crowdfunding" ]
+  tyac_famille varchar
+}
+Table personnes {
+  per_id int [increment, primary key]
+  per_nom varchar [not null]
+  civ_id int 
+  per_prenom varchar [not null]
+  per_tel varchar [unique]
+  per_email varchar [not null]
+  per_adresse varchar
+  per_code_postal varchar
+  per_ville varchar
+  per_dat_naissance date
+}
+
+Table civilites {
+  civ_id int
+  civ_libelle varchar 
+}
+
+
+
+ Table role {
+  rol_id int [increment, primary key]
+  tyro_id int
+  pers_id int
+  act_id int
+
+ }
+
+Table reglements {
+  reg_id int [increment, primary key]
+  reg_montant float
+  mreg_id int
+  reg_date varchar
+}
+
+Table modereglement {
+  mreg_id int 
+  mreg_code varchar [note : "ESP, CHE, HEL, DIS, TPE" ]
+  mreg_Libelle varchar 
+ }
+
+Table tarifs {
+  tar_id int [increment, primary key]
+  ans_id int 
+  act_id int
+  tar_montant float
+  tar_libelle varchar
+}
+
+Table an_exercice {
+  ans_id int 
+  ans_libelle varchar [note:"2019-2020, 2020-2021,..."]
+  ans_date_debut date
+  ans_date_fin date
+}
+
+Table inscriptions {
+  ins_id int [increment, primary key]
+  per_id int 
+  act_id int 
+  ins_date_inscription date [not null]
+  reg_id int
+  ins_debut date [note : "début d'activité de la ligne"]
+  ins_fin date [note : "fin'activité de la ligne"]
+  ins_montant float
+  ans_id int
+}
+
+Table typerole {
+tyro_id int 
+tyro_libelle varchar [note :"animateur, référent, etc"]
+}
+
+ref : "personnes"."civ_id" - "civilites"."civ_id"
+ref : "activites"."act_id" < "inscriptions"."act_id"
+ref : "inscriptions"."per_id" > "personnes"."per_id"
+
+Ref: "reglements"."reg_id" < "inscriptions"."reg_id"
+
+Ref: "domaines"."dom_id" > "activites"."dom_id"
+
+Ref: "an_exercice"."ans_id" < "tarifs"."ans_id"
+
+Ref: "tarifs"."act_id" < "activites"."act_id"
+
+Ref: "typeactivite"."tyac_id" < "activites"."tyac_id"
+
+Ref: "role"."pers_id" < "personnes"."per_id"
+
+Ref: "activites"."act_id" < "role"."act_id"
+
+Ref: "reglements"."mreg_id" > "modereglement"."mreg_id"
+
+Ref: "typerole"."tyro_id" < "role"."tyro_id"
+
+Ref: "an_exercice"."ans_id" < "inscriptions"."ans_id"

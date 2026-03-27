@@ -1,0 +1,105 @@
+{
+    "order": {
+        "id": 146214707,
+        "date": "2025-09-05T19:44:29.6691174+02:00",
+        "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+        "formType": "Membership",
+        "organizationName": "Cercle Celtique de Rennes",
+        "organizationSlug": "cercle-celtique-de-rennes",
+        "organizationType": "Association1901Rig",
+        "organizationIsUnderColucheLaw": false,
+        "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+        "meta": {
+            "createdAt": "2025-09-05T19:43:29.3271287+02:00",
+            "updatedAt": "2025-09-05T19:44:29.8726913+02:00"
+        },
+        "isAnonymous": false,
+        "isAmountHidden": false
+    },
+    "payer": {
+        "email": "bonnierepatrick@yahoo.fr",
+        "country": "FRA",
+        "firstName": "Christine",
+        "lastName": "Bonnière"
+    },
+    "payments": [
+        {
+            "cashOutState": "Transfered",
+            "shareAmount": 3800,
+            "id": 66887094,
+            "amount": 7900,
+            "date": "2025-09-05T19:44:29.6691174+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-05T19:43:29.3271287+02:00",
+                "updatedAt": "2025-09-05T19:44:29.71+02:00"
+            },
+            "refundOperations": []
+        }
+    ],
+    "name": "Adhésion annuelle du 1er septembre 2025 au 31 aout 2026",
+    "user": {
+        "firstName": "Christine",
+        "lastName": "Bonnière"
+    },
+    "priceCategory": "Fixed",
+    "customFields": [
+        {
+            "id": 6275825,
+            "name": "Civilité",
+            "type": "ChoiceList",
+            "answer": " Madame"
+        },
+        {
+            "id": 6275826,
+            "name": "date de naissance",
+            "type": "Date",
+            "answer": "28/05/1960"
+        },
+        {
+            "id": 6275827,
+            "name": "Code postal",
+            "type": "Zipcode",
+            "answer": "35510"
+        },
+        {
+            "id": 6275828,
+            "name": "ville",
+            "type": "TextInput",
+            "answer": "Cesson Sévigné"
+        },
+        {
+            "id": 6275829,
+            "name": "n° de téléphone",
+            "type": "Phone",
+            "answer": "0603237286"
+        },
+        {
+            "id": 6275830,
+            "name": "adresse courriel",
+            "type": "TextInput",
+            "answer": "christinebonniere@yahoo.fr"
+        }
+    ],
+    "options": [
+        {
+            "name": "D01 - Danse bretonne",
+            "amount": 4100,
+            "priceCategory": "Fixed",
+            "isRequired": false,
+            "customFields": [],
+            "optionId": 17567651
+        }
+    ],
+    "qrCode": "MTQ2MjE0NzA3OjYzODkyNjk4MjA5MzI3MTI4Nw==",
+    "membershipCardUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/carte-adherent?cardId=146214707&ag=146214707",
+    "tierDescription": "",
+    "tierId": 17567647,
+    "id": 146214707,
+    "amount": 3800,
+    "type": "Membership",
+    "initialAmount": 3800,
+    "state": "Processed"
+}

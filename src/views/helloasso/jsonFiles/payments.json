@@ -1,0 +1,1094 @@
+{
+    "data": [
+        {
+            "order": {
+                "id": 147511363,
+                "date": "2025-09-12T10:27:52.8019813+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-12T10:26:39.2052088+02:00",
+                    "updatedAt": "2025-09-12T10:27:53.0068046+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "solene.lecoutey@hotmail.fr",
+                "country": "FRA",
+                "firstName": "SOLENE",
+                "lastName": "LECOUTEY"
+            },
+            "items": [
+                {
+                    "shareAmount": 7900,
+                    "shareItemAmount": 3800,
+                    "shareOptionsAmount": 4100,
+                    "id": 147511363,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/147511363",
+            "id": 67662529,
+            "amount": 7900,
+            "date": "2025-09-12T10:27:52.8019813+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-12T10:26:39.2052088+02:00",
+                "updatedAt": "2025-09-12T10:27:52.8333333+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 147368968,
+                "date": "2025-09-11T15:29:28.1831234+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-11T15:28:43.3327125+02:00",
+                    "updatedAt": "2025-09-11T15:29:28.3506822+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "matthieu.foltete@gmail.com",
+                "country": "FRA",
+                "firstName": "Matthieu",
+                "lastName": "Foltête"
+            },
+            "items": [
+                {
+                    "shareAmount": 3800,
+                    "shareItemAmount": 3800,
+                    "id": 147368968,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/147368968",
+            "id": 67579583,
+            "amount": 3800,
+            "date": "2025-09-11T15:29:28.1831234+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-11T15:28:43.3327125+02:00",
+                "updatedAt": "2025-09-11T15:29:28.2433333+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 147260249,
+                "date": "2025-09-10T22:02:24.5044076+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-10T21:59:33.8709156+02:00",
+                    "updatedAt": "2025-09-10T22:02:24.7156997+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "seb.pillot95@gmail.com",
+                "country": "FRA",
+                "firstName": "Sébastien",
+                "lastName": "PILLOT"
+            },
+            "items": [
+                {
+                    "shareAmount": 7900,
+                    "shareItemAmount": 3800,
+                    "shareOptionsAmount": 4100,
+                    "id": 147260249,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/147260249",
+            "id": 67514054,
+            "amount": 7900,
+            "date": "2025-09-10T22:02:24.5044076+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-10T21:59:33.8709156+02:00",
+                "updatedAt": "2025-09-10T22:02:24.5466667+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 147022484,
+                "date": "2025-09-09T21:12:32.8711013+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-09T21:11:42.1473972+02:00",
+                    "updatedAt": "2025-09-09T21:12:33.0146006+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "lanigmails@icloud.com",
+                "country": "FRA",
+                "firstName": "Alan",
+                "lastName": "Massé"
+            },
+            "items": [
+                {
+                    "shareAmount": 17100,
+                    "shareItemAmount": 3800,
+                    "shareOptionsAmount": 13300,
+                    "id": 147022484,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/147022484",
+            "id": 67364873,
+            "amount": 17100,
+            "date": "2025-09-09T21:12:32.8711013+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-09T21:11:42.1473972+02:00",
+                "updatedAt": "2025-09-09T21:12:32.8933333+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 146959789,
+                "date": "2025-09-09T17:13:04.445919+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-09T17:11:07.0866876+02:00",
+                    "updatedAt": "2025-09-09T17:13:04.6612274+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "Christine@meignan-lairy.bzh",
+                "country": "FRA",
+                "firstName": "Christine",
+                "lastName": "Meignan-Lairy"
+            },
+            "items": [
+                {
+                    "shareAmount": 7900,
+                    "shareItemAmount": 3800,
+                    "shareOptionsAmount": 4100,
+                    "id": 146959789,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/146959789",
+            "id": 67327708,
+            "amount": 7900,
+            "date": "2025-09-09T17:13:04.445919+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-09T17:11:07.0866876+02:00",
+                "updatedAt": "2025-09-09T17:13:04.47+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 146214707,
+                "date": "2025-09-05T19:44:29.6691174+02:00",
+                "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+                "formType": "Membership",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+                "meta": {
+                    "createdAt": "2025-09-05T19:43:29.3271287+02:00",
+                    "updatedAt": "2025-09-05T19:44:29.8726913+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "bonnierepatrick@yahoo.fr",
+                "country": "FRA",
+                "firstName": "Christine",
+                "lastName": "Bonnière"
+            },
+            "items": [
+                {
+                    "shareAmount": 7900,
+                    "shareItemAmount": 3800,
+                    "shareOptionsAmount": 4100,
+                    "id": 146214707,
+                    "amount": 3800,
+                    "type": "Membership",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutState": "Transfered",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/paiement-attestation/146214707",
+            "id": 66887094,
+            "amount": 7900,
+            "date": "2025-09-05T19:44:29.6691174+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-05T19:43:29.3271287+02:00",
+                "updatedAt": "2025-09-05T19:44:29.71+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 141936566,
+                "date": "2025-07-22T22:59:35.465239+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-22T22:57:49.81911+02:00",
+                    "updatedAt": "2025-07-22T22:59:35.7100839+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "nicoleclercq@yahoo.fr",
+                "country": "FRA",
+                "firstName": "Nicolas",
+                "lastName": "Leclercq"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 141936566,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/141936566",
+            "id": 64549651,
+            "amount": 1000,
+            "date": "2025-07-22T22:59:35.465239+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-22T22:57:49.81911+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 141440965,
+                "date": "2025-07-16T08:29:22.5994756+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-16T08:28:39.3796812+02:00",
+                    "updatedAt": "2025-07-16T08:29:22.7378242+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "1219momo@gmail.com",
+                "country": "FRA",
+                "firstName": "Momoyo",
+                "lastName": "Yamanaka"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 141440965,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/141440965",
+            "id": 64307338,
+            "amount": 1000,
+            "date": "2025-07-16T08:29:22.5994756+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-16T08:28:39.3796812+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 140875604,
+                "date": "2025-07-08T22:40:01.7031902+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-08T22:39:15.8701967+02:00",
+                    "updatedAt": "2025-07-08T22:40:01.8576638+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "sibylle.dethesut@gmail.com",
+                "country": "FRA",
+                "firstName": "Sibylle",
+                "lastName": "BENIER"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140875604,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140875605,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/140875604",
+            "id": 64008596,
+            "amount": 2000,
+            "date": "2025-07-08T22:40:01.7031902+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-08T22:39:15.8701967+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 140441364,
+                "date": "2025-07-04T14:38:29.3311575+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-04T14:36:04.9640307+02:00",
+                    "updatedAt": "2025-07-04T14:38:29.4785966+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "eas237@yahoo.fr",
+                "country": "FRA",
+                "firstName": "Eva-Anne",
+                "lastName": "SUBILEAU"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140441364,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140441365,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/140441364",
+            "id": 63771602,
+            "amount": 2000,
+            "date": "2025-07-04T14:38:29.3311575+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-04T14:36:04.9640307+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 140241331,
+                "date": "2025-07-02T19:32:26.3665298+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-02T19:31:49.3114464+02:00",
+                    "updatedAt": "2025-07-02T19:32:26.537107+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "antoinechatelier@hotmail.com",
+                "country": "FRA",
+                "firstName": "Antoine",
+                "lastName": "Châtelier"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140241331,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140241332,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/140241331",
+            "id": 63669686,
+            "amount": 2000,
+            "date": "2025-07-02T19:32:26.3665298+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-02T19:31:49.3114464+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 140197916,
+                "date": "2025-07-02T14:11:17.8830618+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-02T14:09:58.6307511+02:00",
+                    "updatedAt": "2025-07-02T14:11:18.0093954+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "fabienne.tireau@free.fr",
+                "country": "FRA",
+                "firstName": "Fabienne",
+                "lastName": "Tireau"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140197916,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/140197916",
+            "id": 63647219,
+            "amount": 1000,
+            "date": "2025-07-02T14:11:17.8830618+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-02T14:09:58.6307511+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 140181887,
+                "date": "2025-07-02T11:56:12.6411679+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-07-02T11:54:02.8589652+02:00",
+                    "updatedAt": "2025-07-02T11:56:12.7935598+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "sd_b@hotmail.com",
+                "country": "FRA",
+                "firstName": "Sébastien",
+                "lastName": "Dupont"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140181887,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 140181888,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-08-07T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/140181887",
+            "id": 63638968,
+            "amount": 2000,
+            "date": "2025-07-02T11:56:12.6411679+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-07-02T11:54:02.8589652+02:00",
+                "updatedAt": "2025-08-08T03:46:45.7481257+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139948924,
+                "date": "2025-06-30T14:02:03.871486+02:00",
+                "formSlug": "journees-enfant-ete",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Journées enfant été 2025",
+                "meta": {
+                    "createdAt": "2025-06-30T14:00:59.2898838+02:00",
+                    "updatedAt": "2025-06-30T14:02:04.0118376+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "mariejan21@hotmail.com",
+                "country": "FRA",
+                "firstName": "Olwenn",
+                "lastName": "Grosse"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948924,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948925,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948926,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948927,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948928,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948929,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948930,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139948931,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/paiement-attestation/139948924",
+            "id": 63512298,
+            "amount": 8000,
+            "date": "2025-06-30T14:02:03.871486+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-30T14:00:59.2898838+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139557815,
+                "date": "2025-06-27T11:34:11.9325272+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-27T11:32:04.1037757+02:00",
+                    "updatedAt": "2025-06-27T11:34:12.1189025+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "edamon.artik@gmail.com",
+                "country": "FRA",
+                "firstName": "Erwan",
+                "lastName": "Lacaille"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139557815,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139557815",
+            "id": 63318690,
+            "amount": 1000,
+            "date": "2025-06-27T11:34:11.9325272+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-27T11:32:04.1037757+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139460591,
+                "date": "2025-06-26T18:47:18.548531+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-26T18:44:54.7421575+02:00",
+                    "updatedAt": "2025-06-26T18:47:18.644345+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "madette35@gmail.com",
+                "country": "FRA",
+                "firstName": "Marie",
+                "lastName": "Moalic"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139460591,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139460591",
+            "id": 63278244,
+            "amount": 1000,
+            "date": "2025-06-26T18:47:18.548531+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-26T18:44:54.7421575+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139454629,
+                "date": "2025-06-26T18:23:55.6614422+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-26T18:18:02.5800279+02:00",
+                    "updatedAt": "2025-06-26T18:23:55.7738662+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "cguegan35@laposte.net",
+                "country": "FRA",
+                "firstName": "Christian",
+                "lastName": "GUEGAN"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139454629,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139454629",
+            "id": 63275906,
+            "amount": 1000,
+            "date": "2025-06-26T18:23:55.6614422+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-26T18:18:02.5800279+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139432116,
+                "date": "2025-06-26T15:46:17.825027+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-26T15:46:03.7967794+02:00",
+                    "updatedAt": "2025-06-26T15:46:17.936626+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "matthieu.furet@laposte.net",
+                "country": "FRA",
+                "firstName": "Matthieu",
+                "lastName": "Furet"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139432116,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139432118,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139432116",
+            "id": 63265513,
+            "amount": 2000,
+            "date": "2025-06-26T15:46:17.825027+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-26T15:46:03.7967794+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139380196,
+                "date": "2025-06-26T09:55:09.4051268+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-26T09:53:58.7060994+02:00",
+                    "updatedAt": "2025-06-26T09:55:09.5524204+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "roxannecleran.2017@gmail.com",
+                "country": "FRA",
+                "firstName": "Roxanne",
+                "lastName": "Fiacre"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139380196,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                },
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139380197,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139380196",
+            "id": 63242454,
+            "amount": 2000,
+            "date": "2025-06-26T09:55:09.4051268+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-26T09:53:58.7060994+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        },
+        {
+            "order": {
+                "id": 139357202,
+                "date": "2025-06-25T23:52:43.8300384+02:00",
+                "formSlug": "fete-de-fin-de-saison-repas",
+                "formType": "Event",
+                "organizationName": "Cercle Celtique de Rennes",
+                "organizationSlug": "cercle-celtique-de-rennes",
+                "organizationType": "Association1901",
+                "organizationIsUnderColucheLaw": false,
+                "formName": "Fête de fin de saison - Repas",
+                "meta": {
+                    "createdAt": "2025-06-25T23:52:07.603932+02:00",
+                    "updatedAt": "2025-06-25T23:52:43.9850156+02:00"
+                },
+                "isAnonymous": false,
+                "isAmountHidden": false
+            },
+            "payer": {
+                "email": "au2danses@gmail.com",
+                "country": "FRA",
+                "firstName": "Aude",
+                "lastName": "Garnier"
+            },
+            "items": [
+                {
+                    "shareAmount": 1000,
+                    "shareItemAmount": 1000,
+                    "id": 139357202,
+                    "amount": 1000,
+                    "type": "Registration",
+                    "state": "Processed"
+                }
+            ],
+            "cashOutDate": "2025-07-08T00:00:00+02:00",
+            "cashOutState": "CashedOut",
+            "paymentReceiptUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/paiement-attestation/139357202",
+            "id": 63231156,
+            "amount": 1000,
+            "date": "2025-06-25T23:52:43.8300384+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-25T23:52:07.603932+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        }
+    ],
+    "pagination": {
+        "pageSize": 20,
+        "totalCount": -1,
+        "pageIndex": 1,
+        "totalPages": -1,
+        "continuationToken": "202506252152438300384_63231156"
+    }
+}

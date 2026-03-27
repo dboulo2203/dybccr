@@ -1,0 +1,503 @@
+{
+    "data": [
+        {
+            "banner": {
+                "fileName": "croppedimage-4ea3fdae315c490b9e976178eba5786d.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/adhesions/croppedimage-4ea3fdae315c490b9e976178eba5786d.png"
+            },
+            "currency": "EUR",
+            "description": "En adhérant à notre association, vous rejoignez une équipe motivée qui s'investit et œuvre sur un projet de valorisation et de rencontre autour de la culture bretonne. Pour plus d'information sur nos modalités d'adhésion, vous pouvez consulter nos tarifs et conditions ci-dessous ou contacter l'accueil par mail à l'adresse contact@ccrennes.bzh ou par téléphone que les horaires d'ouverture de l'accueil au 02 99 54 36 45. ",
+            "startDate": "2025-09-01T00:00:00+02:00",
+            "endDate": "2026-08-31T23:59:59+02:00",
+            "meta": {
+                "createdAt": "2025-09-02T09:43:20.193+02:00",
+                "updatedAt": "2025-09-04T11:00:02.253+02:00"
+            },
+            "state": "Public",
+            "title": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/widget-vignette",
+            "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+            "formType": "Membership",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-995dd7e7d9ae4216862c782cbd63778e.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-995dd7e7d9ae4216862c782cbd63778e.png"
+            },
+            "currency": "EUR",
+            "description": "Yaouankiz 2025 va aller à la rencontre de la Tchéquie. \nVenez découvrir un monde musical plein de surprises",
+            "startDate": "2025-10-20T09:00:00+02:00",
+            "endDate": "2025-10-25T17:00:00+02:00",
+            "logo": {
+                "fileName": "croppedimage-1452e8fa89de4fdb98cad9bf3c2d755a.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-1452e8fa89de4fdb98cad9bf3c2d755a.png"
+            },
+            "meta": {
+                "createdAt": "2025-08-29T09:29:36.617+02:00",
+                "updatedAt": "2025-09-08T12:15:27.013+02:00"
+            },
+            "state": "Public",
+            "title": "Yaouankiz 2025",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/yaouankiz-2025/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/yaouankiz-2025/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/yaouankiz-2025/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/yaouankiz-2025/widget-vignette",
+            "formSlug": "yaouankiz-2025",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/yaouankiz-2025",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-f71e66e077a7421dbbd8b55827840946.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-f71e66e077a7421dbbd8b55827840946.png"
+            },
+            "currency": "EUR",
+            "description": "Le Cercle Celtique de Rennes vous invite à participer à la fête de fin de saison qui se tiendra au Parquet de Bal vendredi 27 juin, à partir de 18h30 ! \n\nVous avez ici la possibilité de réserver un/plusieurs repas.\n",
+            "startDate": "2025-06-27T18:30:00+02:00",
+            "endDate": "2025-06-27T23:59:59+02:00",
+            "meta": {
+                "createdAt": "2025-06-10T11:33:44.09+02:00",
+                "updatedAt": "2025-06-20T14:17:47.51+02:00"
+            },
+            "state": "Public",
+            "title": "Fête de fin de saison - Repas",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/widget-vignette",
+            "formSlug": "fete-de-fin-de-saison-repas",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-c74502486324496d8fb92b0cc9204754.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-c74502486324496d8fb92b0cc9204754.png"
+            },
+            "currency": "EUR",
+            "description": "Nouveauté 2025\nDes journées dédiées aux enfants sont proposées au Cercle celtique de Rennes tous les mardis et jeudis du mois de juillet. \nUn programme varié vous est proposé. \nAu plaisir de vous voir",
+            "startDate": "2025-07-08T09:00:00+02:00",
+            "endDate": "2025-07-31T17:00:59+02:00",
+            "meta": {
+                "createdAt": "2025-06-03T16:32:51.667+02:00",
+                "updatedAt": "2025-07-17T18:30:32.3+02:00"
+            },
+            "state": "Public",
+            "title": "Journées enfant été 2025",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete/widget-vignette",
+            "formSlug": "journees-enfant-ete",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/journees-enfant-ete",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-508b6b5f9c3742cb90e3b5cdbb76994a.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-508b6b5f9c3742cb90e3b5cdbb76994a.png"
+            },
+            "currency": "EUR",
+            "description": "Stage de Gallo avec Anne-Marie Pelhate au Cercle Celtique de Rennes.",
+            "startDate": "2025-05-24T09:30:00+02:00",
+            "endDate": "2025-05-24T17:00:59+02:00",
+            "logo": {
+                "fileName": "croppedimage-0b0b1e6f688e4c23b7f913e55fe9b5e7.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-0b0b1e6f688e4c23b7f913e55fe9b5e7.png"
+            },
+            "meta": {
+                "createdAt": "2025-05-12T14:46:47.08+02:00",
+                "updatedAt": "2025-05-12T15:24:12.667+02:00"
+            },
+            "state": "Public",
+            "title": "Stage de Gallo",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo/widget-vignette",
+            "formSlug": "stage-de-gallo",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-2688fc0debe243b5bfe63fce0d60e71a.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-2688fc0debe243b5bfe63fce0d60e71a.png"
+            },
+            "currency": "EUR",
+            "description": "Dans le cadre de la fête de la Bretagne venez au Bal folk danser/ écouter Ma petite, Trio Forj, Caoz' toujours, Haï' don au Parquet de Bal dès 19h ! Une petite restauration sera disponible sur place !",
+            "startDate": "2025-05-22T19:00:00+02:00",
+            "endDate": "2025-05-22T23:59:59+02:00",
+            "meta": {
+                "createdAt": "2025-04-14T12:16:56.297+02:00",
+                "updatedAt": "2025-05-21T09:34:09.92+02:00"
+            },
+            "state": "Public",
+            "title": "Bal Folk",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/bal-folk/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/bal-folk/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/bal-folk/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/bal-folk/widget-vignette",
+            "formSlug": "bal-folk",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/bal-folk",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "currency": "EUR",
+            "description": "Venez rencontrer Maurice Langlois et ses vieux outils, puis participez à l'élaboration d'une interview en gallo qui sera diffusée sur Plum'FM.",
+            "startDate": "2025-03-29T09:30:00+01:00",
+            "endDate": "2025-03-29T17:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-03-11T15:53:19.603+01:00",
+                "updatedAt": "2025-03-31T15:44:19.953+02:00"
+            },
+            "state": "Public",
+            "title": "Mois du gallo : stage et interview",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mois-du-gallo-stage-et-interview/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mois-du-gallo-stage-et-interview/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mois-du-gallo-stage-et-interview/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mois-du-gallo-stage-et-interview/widget-vignette",
+            "formSlug": "mois-du-gallo-stage-et-interview",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mois-du-gallo-stage-et-interview",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-be8260cc792b4966a3240c01fab54133.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-be8260cc792b4966a3240c01fab54133.png"
+            },
+            "currency": "EUR",
+            "description": "La vitalité de la culture traditionnelle bretonne est tributaire de l’invention d’un objet : le magnétophone sur cassette. Il permit à une certaine jeunesse de recueillir juste à temps les paroles, les musiques et les chants d’un monde qui allait disparaitre. Aujourd’hui, à l’heure d’Internet, des dizaines  de milliers d’heures de ces enregistrements sont accessibles en ligne, gratuitement et par tout le monde.",
+            "startDate": "2025-02-28T18:30:00+01:00",
+            "endDate": "2025-02-28T20:30:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-22T15:45:20.757+01:00",
+                "updatedAt": "2025-01-24T14:54:02.43+01:00"
+            },
+            "state": "Public",
+            "title": "Projection du film documentaire «Dastum, La maison des sources » ",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/projection-du-film-documentaire-la-maison-des-sources/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/projection-du-film-documentaire-la-maison-des-sources/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/projection-du-film-documentaire-la-maison-des-sources/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/projection-du-film-documentaire-la-maison-des-sources/widget-vignette",
+            "formSlug": "projection-du-film-documentaire-la-maison-des-sources",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/projection-du-film-documentaire-la-maison-des-sources",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-9720a856ce4149b796d953083508bfe2.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-9720a856ce4149b796d953083508bfe2.png"
+            },
+            "currency": "EUR",
+            "description": "Le cercle celtique de Rennes propose des journées à destination des enfants pendant le festival Sevenadur. Seront proposés aux enfants des stages, des animations et un spectacle.\n\nSuite à votre inscription, vous recevrez une fiche d'autorisation de soin et droit à l'image. ",
+            "startDate": "2025-02-19T09:00:00+01:00",
+            "endDate": "2025-02-26T17:00:59+01:00",
+            "logo": {
+                "fileName": "croppedimage-8f78878d8559415f823549ccc12ecfd1.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-8f78878d8559415f823549ccc12ecfd1.png"
+            },
+            "meta": {
+                "createdAt": "2025-01-17T08:08:14.76+01:00",
+                "updatedAt": "2025-02-17T10:10:28.503+01:00"
+            },
+            "state": "Public",
+            "title": "Sevenadur enfant 2025",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/sevenadur-enfant-2025/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/sevenadur-enfant-2025/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/sevenadur-enfant-2025/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/sevenadur-enfant-2025/widget-vignette",
+            "formSlug": "sevenadur-enfant-2025",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/sevenadur-enfant-2025",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-6f45e425fcff4ef0b00e8d14ea3e2d4f.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-6f45e425fcff4ef0b00e8d14ea3e2d4f.png"
+            },
+            "currency": "EUR",
+            "description": "Venez vivre l’expérience de la création d’une danse collective, autour des imaginaires de la spirale, des éléments naturels et de la musique bretonne, avec le chorégraphe de danse contemporaine Simon Queven.",
+            "startDate": "2025-03-08T10:00:00+01:00",
+            "endDate": "2025-03-08T12:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T16:12:32.173+01:00",
+                "updatedAt": "2025-03-11T15:53:28.387+01:00"
+            },
+            "state": "Public",
+            "title": "Atelier TRISKEL #2",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-triskel-2/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-triskel-2/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-triskel-2/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-triskel-2/widget-vignette",
+            "formSlug": "atelier-triskel-2",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-triskel-2",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-cad0bd698e034b6dae645cf3eed1ece5.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-cad0bd698e034b6dae645cf3eed1ece5.png"
+            },
+            "currency": "EUR",
+            "description": "Véronique Bourjot a exercé le métier de musicienne intervenante en milieu scolaire pendant 25 ans principalement dans le Morbihan. En 2004, elle ouvre la classe de chant traditionnel breton au conservatoire de musique et danse de Pontivy puis en 2013 au conservatoire de musique et danse de Lorient. ",
+            "startDate": "2025-03-08T10:00:00+01:00",
+            "endDate": "2025-03-08T17:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T15:58:45.237+01:00",
+                "updatedAt": "2025-01-15T16:21:17.377+01:00"
+            },
+            "state": "Public",
+            "title": "Stage de chant Véronique Bourjot",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-chant-veronique-bourjot/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-chant-veronique-bourjot/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-chant-veronique-bourjot/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-chant-veronique-bourjot/widget-vignette",
+            "formSlug": "stage-de-chant-veronique-bourjot",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-chant-veronique-bourjot",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-3265ed7f3f914f9da183877844b823d7.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-3265ed7f3f914f9da183877844b823d7.png"
+            },
+            "currency": "EUR",
+            "description": "La broderie, c'est décorer un tissu pour l'embellir ou le personnaliser à votre goût, généralement avec du fil. C'est un lien au sens propre comme au figuré. Par l'utilisation de points simples, traditionnellement repris sur les costumes bretons, nous tentons de transmettre ce lien entre les générations. Nous proposons un kit dont le modèle proposé est réalisable que vous soyez débutant ou non.",
+            "startDate": "2025-03-01T09:30:00+01:00",
+            "endDate": "2025-03-02T17:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T15:24:19.21+01:00",
+                "updatedAt": "2025-02-19T14:34:36.52+01:00"
+            },
+            "state": "Public",
+            "title": "Stage broderie",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-broderie-1/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-broderie-1/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-broderie-1/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-broderie-1/widget-vignette",
+            "formSlug": "stage-broderie-1",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-broderie-1",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-0933d5fdb2ba4d26b0fd7c8c67a22c7f.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-0933d5fdb2ba4d26b0fd7c8c67a22c7f.png"
+            },
+            "currency": "EUR",
+            "description": "Kévin Colas et Brice Autier aiment tous les deux le répertoire de Haute-Bretagne et ça s'entend ! ",
+            "startDate": "2025-03-01T09:30:00+01:00",
+            "endDate": "2025-03-01T17:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T15:09:35.877+01:00",
+                "updatedAt": "2025-01-15T16:20:07.057+01:00"
+            },
+            "state": "Public",
+            "title": "Stage sonneurs avec Kévin Colas et Brice Autier",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-sonneurs-avec-kevin-colas-et-brice-autier/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-sonneurs-avec-kevin-colas-et-brice-autier/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-sonneurs-avec-kevin-colas-et-brice-autier/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-sonneurs-avec-kevin-colas-et-brice-autier/widget-vignette",
+            "formSlug": "stage-sonneurs-avec-kevin-colas-et-brice-autier",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-sonneurs-avec-kevin-colas-et-brice-autier",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-ed321d63dba040e2bff11162df6f8b7a.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-ed321d63dba040e2bff11162df6f8b7a.png"
+            },
+            "currency": "EUR",
+            "description": "Venez vivre l’expérience de la création d’une danse collective, autour des imaginaires de la spirale, des éléments naturels et de la musique bretonne, avec le chorégraphe de danse contemporaine Simon Queven.",
+            "startDate": "2025-03-01T10:00:00+01:00",
+            "endDate": "2025-03-01T12:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T14:55:22.18+01:00",
+                "updatedAt": "2025-02-13T17:48:34.693+01:00"
+            },
+            "state": "Public",
+            "title": "Atelier découverte TRISKEL #1",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-decouverte-triskel-1/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-decouverte-triskel-1/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-decouverte-triskel-1/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-decouverte-triskel-1/widget-vignette",
+            "formSlug": "atelier-decouverte-triskel-1",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-decouverte-triskel-1",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-5fc4cbc407354616a01047bf3006cb57.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-5fc4cbc407354616a01047bf3006cb57.png"
+            },
+            "currency": "EUR",
+            "description": "Nous vous proposons une matinée relaxation et bien-être en musique et yoga. Un moment à partager avec votre enfant qui sera suivi d’un atelier culinaire qui vous permettra d’apprendre à préparer et à déguster des spécialités indiennes. ",
+            "startDate": "2025-02-26T10:30:00+01:00",
+            "endDate": "2025-02-26T13:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-14T14:36:16.43+01:00",
+                "updatedAt": "2025-01-21T14:28:53.523+01:00"
+            },
+            "state": "Public",
+            "title": "Atelier parents-enfants : yoga, cuisine indienne, massages pour les tout-petits",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits/widget-vignette",
+            "formSlug": "atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-parents-enfants-yoga-cuisine-indienne-massages-pour-les-tout-petits",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-fe97cc4478d146278c7e46c0c21d0306.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-fe97cc4478d146278c7e46c0c21d0306.png"
+            },
+            "currency": "EUR",
+            "description": "Le sarrasin fait lien ! Le sarrasin, on le connaît dans la cuisine bretonne, mais pas que… Venez découvrir comment se cuisine et se mange le sarrasin dans la cuisine japonaise.",
+            "startDate": "2025-02-22T11:00:00+01:00",
+            "endDate": "2025-02-22T13:00:00+01:00",
+            "meta": {
+                "createdAt": "2025-01-13T12:14:00.923+01:00",
+                "updatedAt": "2025-01-15T16:18:58.023+01:00"
+            },
+            "state": "Public",
+            "title": "Atelier dégustation cuisine japonaise",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-degustation-cuisine-japonaise/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-degustation-cuisine-japonaise/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-degustation-cuisine-japonaise/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-degustation-cuisine-japonaise/widget-vignette",
+            "formSlug": "atelier-degustation-cuisine-japonaise",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/atelier-degustation-cuisine-japonaise",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-114a4498679b4d918db57609c1f230b9.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-114a4498679b4d918db57609c1f230b9.png"
+            },
+            "currency": "EUR",
+            "description": "\"Voyageons ensemble aux confins du pays Vannetais, à la limite de la Cornouaille et du pays Gallo dans le terroir Pontivyen. Ce stage est l'occasion d'apprendre ou de revoir les danses du pays de Pontivy (laride, bal, tamm kerh...) mais également de découvrir comment la danse a évolué historiquement et géographiquement dans ces quelques communes qui entourent Pontivy.\"",
+            "startDate": "2025-02-19T20:00:00+01:00",
+            "endDate": "2025-02-19T22:00:00+01:00",
+            "meta": {
+                "createdAt": "2025-01-13T10:34:11.037+01:00",
+                "updatedAt": "2025-01-13T12:11:19.437+01:00"
+            },
+            "state": "Public",
+            "title": "Mini stage de danse du pays de Pontivy",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mini-stage-de-danse-du-pays-de-pontivy/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mini-stage-de-danse-du-pays-de-pontivy/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mini-stage-de-danse-du-pays-de-pontivy/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mini-stage-de-danse-du-pays-de-pontivy/widget-vignette",
+            "formSlug": "mini-stage-de-danse-du-pays-de-pontivy",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/mini-stage-de-danse-du-pays-de-pontivy",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-3609446fd19e45cc808a0d681c6c737e.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-3609446fd19e45cc808a0d681c6c737e.png"
+            },
+            "currency": "EUR",
+            "description": "Dans le cadre du festival des Zef et Mer, le Cercle Celtique de Rennes organise son premier fest-noz de l'année 2025 ! Retrouvez les groupes Litha, La Mézanj et Le Pottier-L'Haridon le jeudi 23 janvier 2025 sur la scène du Parquet de Bal. La soirée débutera avec une initiation à la danse à 19h00. ",
+            "startDate": "2025-01-23T19:00:00+01:00",
+            "endDate": "2025-01-23T23:59:59+01:00",
+            "logo": {
+                "fileName": "croppedimage-06cb37d902fa40f0be3f13d6885ad166.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-06cb37d902fa40f0be3f13d6885ad166.png"
+            },
+            "meta": {
+                "createdAt": "2025-01-09T15:50:30.527+01:00",
+                "updatedAt": "2025-01-09T16:11:47.95+01:00"
+            },
+            "state": "Public",
+            "title": "Fest-noz 23 janvier",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fest-noz-23-janvier/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fest-noz-23-janvier/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fest-noz-23-janvier/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fest-noz-23-janvier/widget-vignette",
+            "formSlug": "fest-noz-23-janvier",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fest-noz-23-janvier",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "currency": "EUR",
+            "description": "Dans le cadre de la parade d'ouverture du festival Sevenadur, venez participer à la déambulation de nuit animée par les musiciens et danseurs du Cercle Celtique de Rennes en vous munissant d'un lampion. \n\nUne partie de la somme sera reversée à une association en soutien aux habitants de Mayotte. ",
+            "startDate": "2025-02-22T18:00:00+01:00",
+            "endDate": "2025-02-22T21:00:59+01:00",
+            "meta": {
+                "createdAt": "2025-01-08T11:19:01.91+01:00",
+                "updatedAt": "2025-02-21T22:17:30.137+01:00"
+            },
+            "state": "Public",
+            "title": "Lampions solidaires",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/lampions-solidaires/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/lampions-solidaires/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/lampions-solidaires/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/lampions-solidaires/widget-vignette",
+            "formSlug": "lampions-solidaires",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/lampions-solidaires",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        },
+        {
+            "banner": {
+                "fileName": "croppedimage-58fbd1fc0dbc4498846219dcc67a5a1f.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-58fbd1fc0dbc4498846219dcc67a5a1f.png"
+            },
+            "currency": "EUR",
+            "description": "Venez découvrir comment fabriquer vos propres anches de bombarde lors de ce stage de deux jours auprès d'Alan Letenneur organisé en partenariat entre les associations 3 Regards, Sonerion 35 et le Cercle Celtique de Rennes dans le cadre du festival l'Art et la main.",
+            "startDate": "2025-01-25T09:30:00+01:00",
+            "endDate": "2025-01-26T18:00:00+01:00",
+            "logo": {
+                "fileName": "croppedimage-ec247329ee98403da14f30d06ba3b6cc.png",
+                "publicUrl": "https://cdn.helloasso.com/img/photos/evenements/croppedimage-ec247329ee98403da14f30d06ba3b6cc.png"
+            },
+            "meta": {
+                "createdAt": "2025-01-06T16:51:53.82+01:00",
+                "updatedAt": "2025-01-16T12:29:28.493+01:00"
+            },
+            "state": "Public",
+            "title": "Stage de fabrication d'anche de bombarde",
+            "widgetButtonUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-fabrication-d-anche-de-bombarde/widget-bouton",
+            "widgetFullUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-fabrication-d-anche-de-bombarde/widget",
+            "widgetVignetteHorizontalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-fabrication-d-anche-de-bombarde/widget-vignette-horizontale",
+            "widgetVignetteVerticalUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-fabrication-d-anche-de-bombarde/widget-vignette",
+            "formSlug": "stage-de-fabrication-d-anche-de-bombarde",
+            "formType": "Event",
+            "url": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-fabrication-d-anche-de-bombarde",
+            "organizationSlug": "cercle-celtique-de-rennes"
+        }
+    ],
+    "pagination": {
+        "pageSize": 20,
+        "totalCount": 68,
+        "pageIndex": 1,
+        "totalPages": 4,
+        "continuationToken": "2025010615515382"
+    }
+}

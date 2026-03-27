@@ -1,0 +1,77 @@
+.fs-5 {
+    font-size: 1, 1rem !important;
+}
+
+h4 {
+    font-size: calc(1.1rem + .3vw);
+}
+
+modal-title {
+    font-size: 1, 1rem !important;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+body,
+td,
+th,
+.form-select,
+select,
+.btn,
+.form-control,
+input,
+option,
+.accordion-button,
+button,
+li,
+.accordion-body {
+    font-size: 0.90rem;
+}
+
+
+.form-check-input:checked {
+    background-color: #966a70;
+    border-color: #966a70;
+    shade-color: #966a70;
+}
+
+.form-check-input:unchecked {
+    background-color: #966a70;
+    border-color: #966a70
+}
+
+/* 
+button.accordion-button:active {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #cecccc;
+} */
+
+
+.form-control:focus {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #966a70;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #bebebe;
+    ;
+}
+
+/**** CSS for md documentation ***/
+.mddoc h1 {
+    font-size: 1.5rem !important;
+    text-decoration: underline;
+    color: #d07d29
+}
+
+.mddoc h2 {
+    font-size: 1.2rem !important;
+    color: #d07d29
+}
+
+.mddoc h3 {
+    font-size: 1rem !important;
+}

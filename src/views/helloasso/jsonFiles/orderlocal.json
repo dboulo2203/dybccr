@@ -1,0 +1,29 @@
+{Commande : {
+        "id": 146214707,
+        "date": "2025-09-05T19:44:29.6691174+02:00",
+        "formType": "Membership"
+    }
+User : {
+        "email": "bonnierepatrick@yahoo.fr",
+        "firstName": "Christine",
+        "lastName": "Bonnière"
+    }
+Objet : {
+        "date": "2025-09-05T19:44:29.6691174+02:00",
+        "amount": 38,
+        "form": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026"
+    }
+Paiement : {
+        "date": "2025-09-05T19:44:29.6691174+02:00",
+        "amount": 79,
+        "state": "Authorized",
+        "cashOutState": "Transfered"
+    }
+Activités: [
+        {
+            "code": "D01",
+            "amount": 41,
+            "optionId": 17567651,
+            "name": "D01 - Danse bretonne"
+        }
+    ]
