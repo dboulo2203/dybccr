@@ -134,7 +134,7 @@ export function getSubscriptionActiveProducts() {
   const productsJson = sessionStorage.getItem('products');
   const products = JSON.parse(productsJson);
 
-  return products.filter((product) => product.ref.startsWith('ADH') && product.status === '1');
+  return products.filter((product) => ((product.array_options?.options_type_activite === '3') && (product.status === '1')));
 }
 /**
  * Get products with status_buy = 1 (purchasable)

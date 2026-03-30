@@ -5,7 +5,9 @@ import { getConfigurationFromJson } from '../../shared/commonServices/configurat
 import { displayAlert, getBlocHeaderWithMenu, getPageTitleDisplay, getEditField, getEditFieldDate } from '../../shared/bootstrapServices/components/components.js';
 import { launchInitialisation } from '../../shared/appServices/initialisationService.js';
 import { getSelectFromDatabaseList } from '../../shared/appWSServices/dolibarrListsServices.js';
-import { loadProducts, getAllActiveProducts } from '../../shared/appWSServices/zopaProductServices.js';
+import { loadProducts, getAllActiveProducts, getSubscriptionActiveProducts } from '../../shared/appWSServices/dolibarrProductServices.js';
+import { loadFileFetch, parseMarkdown } from '../../shared/commonServices/markdownService.js';
+import { displayActionSendRegistration } from './actionSendRegistration/actionSendRegistration.js';
 // import '/node_modules/bootstrap'
 /**
  * when called from the url
@@ -55,6 +57,9 @@ export async function displayWebregisterContent(htlmPartId) {
 
        <div id="paymentpart"></div>
     </div>
+
+        <div id="cgvpart"></div>
+    </div>
   </div>
 
   `;
@@ -68,6 +73,8 @@ export async function displayWebregisterContent(htlmPartId) {
   displayinvoicepartBloc("invoicepart");
   displaypaymentpartBloc("paymentpart");
   attachActivitySummaryListeners();
+  attachPaymentListeners();
+  await displaycgvpartBloc("cgvpart");
 
 }
 
@@ -79,10 +86,10 @@ function displayIdentitypartBloc(htmlpart) {
     <div class="p-3">
       <form id="identityForm">
         <div class="row">
-          <div class="col-6">
+          <div class="col-12 col-md-6">
               <div class="form-group row mb-2">
-                <label class="fw-light col-sm-2">Civilité</label>
-                <div class="col-sm-10">
+                <label class="fw-light col-4 col-sm-3">Civilité</label>
+                <div class="col-8 col-sm-9">
                   <select class="form-select" id="identity-civility">
                     ${civilityOptions}
                   </select>
@@ -97,13 +104,13 @@ function displayIdentitypartBloc(htmlpart) {
                 </div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
               ${getEditField('Téléphone', 'identity-phone', '')}
               ${getEditField('Adresse', 'identity-address', '')}
               ${getEditField('Code postal', 'identity-zip', '')}
               ${getEditField('Ville', 'identity-town', '')}
               ${getEditFieldDate('Date de naissance', 'identity-birthday', '')}
-          
+
             </div>
           </div>
         </form>
@@ -140,9 +147,30 @@ function displayIdentitypartBloc(htmlpart) {
 
 
 function displaymembershippartBloc(htmlpart) {
-  const outputStr = `${getBlocHeaderWithMenu('Souhaitez-vous adhérer à l\'association', "<i class='bi bi-person'></i>",)} `
+  const subscriptions = getSubscriptionActiveProducts();
+
+  const radioRows = subscriptions.map((p) => `
+    <div class="col-12 col-md-6">
+      <div class="d-flex align-items-center mb-2">
+        <input class="form-check-input me-2" type="radio" name="membership-type" id="membership-${p['id']}" value="${p['id']}">
+        <label class="form-check-label flex-grow-1" for="membership-${p['id']}">${p['label']}</label>
+        <span class="ms-3 text-nowrap">${getFormattedCurrency(p['price'])}</span>
+      </div>
+    </div>`).join('');
+
+  const outputStr = `
+    ${getBlocHeaderWithMenu("Souhaitez-vous adhérer à l'association ?", "<i class='bi bi-person-check'></i>")}
+    <div class="p-3">
+      ${subscriptions.length === 0
+      ? '<p class="text-muted">Aucun type d\'adhésion disponible.</p>'
+      : `<div class="row">${radioRows}</div>`}
+    </div>`;
+
   document.querySelector("#" + htmlpart).innerHTML = outputStr;
 
+  document.querySelectorAll('[name="membership-type"]').forEach((radio) => {
+    radio.addEventListener('change', refreshActivitySummary);
+  });
 }
 
 
@@ -153,7 +181,7 @@ async function displayactivitypartBloc(htmlpart) {
   );
 
   const checkboxRows = activities.map((p) => `
-    <div class="col-6">
+    <div class="col-12 col-md-6">
       <div class="d-flex align-items-center mb-2">
         <input class="form-check-input me-2" type="checkbox" id="activity-${p['id']}" value="${p['id']}">
         <label class="form-check-label flex-grow-1" for="activity-${p['id']}">${p['label']}</label>
@@ -175,9 +203,20 @@ async function displayactivitypartBloc(htmlpart) {
 
 
 function refreshActivitySummary() {
-  const checked = [...document.querySelectorAll('[id^="activity-"]:checked')];
-  const products = getAllActiveProducts();
-  const selected = checked.map((cb) => products.find((p) => p['id'] === cb.value)).filter(Boolean);
+  const allProducts = getAllActiveProducts();
+  const subscriptionProducts = getSubscriptionActiveProducts();
+
+  // Activités cochées
+  const checkedActivities = [...document.querySelectorAll('[id^="activity-"]:checked')];
+  const selectedActivities = checkedActivities.map((cb) => allProducts.find((p) => p['id'] === cb.value)).filter(Boolean);
+
+  // Adhésion sélectionnée
+  const membershipRadio = document.querySelector('[name="membership-type"]:checked');
+  const selectedMembership = membershipRadio
+    ? subscriptionProducts.find((p) => p['id'] === membershipRadio.value)
+    : null;
+
+  const selected = [...(selectedMembership ? [selectedMembership] : []), ...selectedActivities];
 
   let html = '';
   if (selected.length === 0) {
@@ -213,6 +252,17 @@ function refreshActivitySummary() {
   document.getElementById('activity-summary').innerHTML = html;
 }
 
+function attachPaymentListeners() {
+  const panels = [
+    'paymentHelloAsso', 'paymentSortir', 'paymentCheque',
+    'paymentVirement', 'paymentEspeces', 'paymentChequeVacances',
+  ];
+  panels.forEach((panelId) => {
+    document.querySelector(`#${panelId} button[id^="btnSend"]`)
+      ?.addEventListener('click', () => displayActionSendRegistration(panelId));
+  });
+}
+
 function attachActivitySummaryListeners() {
   document.querySelectorAll('[id^="activity-"]').forEach((cb) => {
     cb.addEventListener('change', refreshActivitySummary);
@@ -228,8 +278,53 @@ function displayinvoicepartBloc(htmlpart) {
     ${getBlocHeaderWithMenu('Votre inscription', "<i class='bi bi-receipt'></i>")}
     <div class="p-3">
       <div id="activity-summary"></div>
+      <div class="mt-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="cgv-check">
+          <label class="form-check-label" for="cgv-check">
+            Veuillez valider les conditions de vente situées ci-dessous
+          </label>
+          <div class="invalid-feedback d-block" id="cgv-error"></div>
+        </div>
+      </div>
     </div>`;
   document.querySelector("#" + htmlpart).innerHTML = outputStr;
+
+  document.getElementById('cgv-check').addEventListener('change', validateRegistration);
+}
+
+function validateRegistration() {
+  const errors = [];
+
+  // Vérification identité
+  const firstname = document.getElementById('identity-firstname')?.value.trim();
+  const lastname = document.getElementById('identity-lastname')?.value.trim();
+  const email = document.getElementById('identity-email')?.value.trim();
+
+  if (!firstname) errors.push('Le prénom est requis.');
+  if (!lastname) errors.push('Le nom est requis.');
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Un email valide est requis.");
+
+  // Vérification au moins une ligne dans le résumé
+  const hasMembership = !!document.querySelector('[name="membership-type"]:checked');
+  const hasActivity = document.querySelectorAll('[id^="activity-"]:checked').length > 0;
+  if (!hasMembership && !hasActivity) errors.push("Veuillez sélectionner au moins une adhésion ou une activité.");
+
+  const cgvCheck = document.getElementById('cgv-check');
+  const cgvError = document.getElementById('cgv-error');
+
+  if (cgvCheck.checked && errors.length > 0) {
+    cgvCheck.checked = false;
+    cgvError.textContent = errors.join(' ');
+  } else {
+    cgvError.textContent = '';
+  }
+
+  const cgvValid = cgvCheck.checked && errors.length === 0;
+  document.getElementById('payment-blocked-msg').style.display = cgvValid ? 'none' : '';
+  document.querySelectorAll('#paymentAccordion .accordion-button').forEach((btn) => {
+    btn.disabled = !cgvValid;
+  });
 }
 
 
@@ -237,11 +332,14 @@ function displaypaymentpartBloc(htmlpart) {
   const outputStr = `
     ${getBlocHeaderWithMenu('Comment pensez-vous régler ?', "<i class='bi bi-credit-card'></i>")}
     <div class="p-3">
+      <div id="payment-blocked-msg" class="alert alert-warning">
+        <i class="bi bi-lock me-2"></i>Veuillez valider les conditions de vente pour accéder aux modes de paiement.
+      </div>
       <div class="accordion" id="paymentAccordion">
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paymentHelloAsso">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentHelloAsso">
               <i class="bi bi-lightning-charge me-2"></i>Je règle immédiatement la totalité par HelloAsso
             </button>
           </h2>
@@ -257,7 +355,7 @@ function displaypaymentpartBloc(htmlpart) {
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paymentSortir">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentSortir">
               <i class="bi bi-ticket-perforated me-2"></i>Je veux utiliser le dispositif sortir
             </button>
           </h2>
@@ -274,7 +372,7 @@ function displaypaymentpartBloc(htmlpart) {
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paymentCheque">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentCheque">
               <i class="bi bi-bank me-2"></i>Je règle par chèque
             </button>
           </h2>
@@ -291,7 +389,7 @@ function displaypaymentpartBloc(htmlpart) {
 
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#paymentVirement">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentVirement">
               <i class="bi bi-arrow-left-right me-2"></i>Je règle par virement
             </button>
           </h2>
@@ -306,7 +404,58 @@ function displaypaymentpartBloc(htmlpart) {
           </div>
         </div>
 
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentEspeces">
+              <i class="bi bi-cash me-2"></i>Je règle en espèces
+            </button>
+          </h2>
+          <div id="paymentEspeces" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+            <div class="accordion-body">
+              <p class="text-muted">Lorsque vous cliquerez sur 'Envoyer' votre inscription sera transmise au cercle celtique. Vous devrez ensuite vous présenter à l'accueil du cercle pour y effectuer votre règlement en espèces.</p>
+              <button type="button" class="btn btn-secondary" id="btnSendEspeces">
+                <i class="bi bi-send me-2"></i>Envoyer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" disabled type="button" data-bs-toggle="collapse" data-bs-target="#paymentChequeVacances">
+              <i class="bi bi-sun me-2"></i>Je règle en chèque vacances
+            </button>
+          </h2>
+          <div id="paymentChequeVacances" class="accordion-collapse collapse" data-bs-parent="#paymentAccordion">
+            <div class="accordion-body">
+              <p class="text-muted">Lorsque vous cliquerez sur 'Envoyer' votre inscription sera transmise au cercle celtique. Vous devrez ensuite vous présenter à l'accueil du cercle pour y remettre vos chèques vacances.</p>
+              <button type="button" class="btn btn-secondary" id="btnSendChequeVacances">
+                <i class="bi bi-send me-2"></i>Envoyer
+              </button>
+            </div>
+          </div>
+        </div>
+
       </div>
+    </div>`;
+
+  document.querySelector("#" + htmlpart).innerHTML = outputStr;
+}
+
+async function displaycgvpartBloc(htmlpart) {
+  const filePath = `${getAppPath()}/public/conditions-de-vente.md`;
+  let content = '';
+  try {
+    const mdText = await loadFileFetch(filePath);
+    content = parseMarkdown(mdText);
+  } catch {
+    content = '<p class="text-muted">Les conditions de vente ne sont pas disponibles.</p>';
+  }
+
+  const outputStr = `
+    ${getBlocHeaderWithMenu('Conditions de vente', "<i class='bi bi-file-text'></i>")}
+    <div class="p-3">
+      ${content}
     </div>`;
 
   document.querySelector("#" + htmlpart).innerHTML = outputStr;

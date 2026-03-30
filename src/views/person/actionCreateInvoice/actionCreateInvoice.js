@@ -1,6 +1,6 @@
 import AutocompleteSelector from '../../../shared/bootstrapServices/components/autocomplete-selector-plain.js';
 import { displayAlert } from '../../../shared/bootstrapServices/components/components.js';
-import { loadProducts, getAllActiveProducts } from '../../../shared/appWSServices/zopaProductServices.js';
+import { loadProducts, getAllActiveProducts } from '../../../shared/appWSServices/dolibarrProductServices.js';
 import { createInvoice, validateInvoice, createInvoicePayment } from '../../../shared/appWSServices/dolibarrInvoicesServices.js';
 import { getFormattedCurrency } from '../../../shared/commonServices/commonFunctions.js';
 import { getSelectFromDatabaseList, getPaymentTypes } from '../../../shared/appWSServices/dolibarrListsServices.js';

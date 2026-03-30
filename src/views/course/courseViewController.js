@@ -5,7 +5,7 @@ import { getConfigurationFromJson, getConfigurationValue } from '../../shared/co
 import { launchInitialisation } from '../../shared/appServices/initialisationService.js'
 import { headerViewDisplay } from '../../shared/appServices/headerViewCont.js'
 import { footerViewDisplay } from '../../shared/appServices/footerViewCont.js'
-import { loadProducts, getAllActiveProducts } from '../../shared/appWSServices/zopaProductServices.js'
+import { loadProducts, getAllActiveProducts } from '../../shared/appWSServices/dolibarrProductServices.js'
 import { getList } from '../../shared/appWSServices/dolibarrListsServices.js'
 import { isCurrentUSerLogged } from '../../shared/appWSServices/dolibarrLoginServices.js'
 
@@ -43,9 +43,8 @@ export async function startCourseController() {
 export async function displayCourseContent(htlmPartId) {
 
   const activities = getAllActiveProducts()
-    .filter((p) => p['array_options']?.['options_type_activite'] === '1')
     .sort((a, b) => (a['label'] ?? '').localeCompare(b['label'] ?? '', 'fr'));
-
+  //     .filter((p) => p['array_options']?.['options_type_activite'] === '1')
   const activityItems = activities.map((p) =>
     `<li class="dropdown-item" id="${p['id']}" data-ref="${p['ref']}">${p['label']}</li>`
   ).join('');
@@ -98,8 +97,20 @@ export async function displayCourseContent(htlmPartId) {
 }
 
 
+function buildCsvFromInvoices(invoices) {
+  const header = ['Nom', 'Email', 'Telephone', 'Facture'].join(';');
+  const rows = invoices.map((inv) => [
+    inv['thirdparty_name'] ?? inv['thirdparty_id'] ?? '',
+    inv['thirdparty_email'] ?? '',
+    inv['thirdparty_phone'] ?? '',
+    inv['ref'] ?? '',
+  ].map((v) => `"${String(v).replace(/"/g, '""')}"`).join(';'));
+  return [header, ...rows].join('\n');
+}
+
 async function displayCourseattendesBloc(htmlPlace, productRef, yearLabel) {
-  const invoices = await getInvoicesForProductAndYear(productRef, yearLabel);
+  const invoices = (await getInvoicesForProductAndYear(productRef, yearLabel))
+    .sort((a, b) => (a['thirdparty_name'] ?? '').localeCompare(b['thirdparty_name'] ?? '', 'fr'));
 
   let rows = '';
   invoices.forEach((inv) => {
@@ -113,7 +124,9 @@ async function displayCourseattendesBloc(htmlPlace, productRef, yearLabel) {
 
   const outpuStr = `
     <div style="margin-top:20px">
-      ${getBlocHeaderWithMenu("Personnes inscrites à l'atelier", "", [])}
+      ${getBlocHeaderWithMenu("Personnes inscrites à l'atelier", "", [
+    { id: "exportBtn", label: "Exporter", icon: "bi-download", active: true }
+  ])}
       <div class="col-12">${invoices.length} résultat(s)</div>
       <div style="overflow-x: auto;">
         <table class="table table-striped">
@@ -136,6 +149,14 @@ async function displayCourseattendesBloc(htmlPlace, productRef, yearLabel) {
   addMultipleEnventListener('.personLink', function (event) {
     globalThis.location.href =
       `${getAppPath()}/views/person?paramid=` + event.currentTarget.getAttribute('entityid');
+  });
+
+  document.getElementById('exportBtn')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    const csv = buildCsvFromInvoices(invoices);
+    navigator.clipboard.writeText(csv).then(() => {
+      document.querySelector('#messageSection').innerHTML = displayAlert('alert-success', 'Liste copiée dans le presse-papier');
+    });
   });
 }
 

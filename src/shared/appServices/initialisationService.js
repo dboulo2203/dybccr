@@ -2,7 +2,7 @@
 import { getConfigurationFromJson } from '../commonServices/configurationService.js';
 import { setTheme } from '../bootstrapServices/bootstrapTheme.js';
 import { getDolibarrStatus, loadCivilitiesTable, loadPaymentTypesTable, loadTypeactivitiesTable, loadTypedomainsTable, loadYearExerciceTable } from '../appWSServices/dolibarrListsServices.js';
-import { loadProducts } from '../appWSServices/zopaProductServices.js';
+import { loadProducts } from '../appWSServices/dolibarrProductServices.js';
 
 /**
  *
