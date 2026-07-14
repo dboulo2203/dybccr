@@ -1,5 +1,7 @@
 # Documentation utilisateur DYBCCR (dybuser)
 
+DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
+
 ## En tant que dybuser, je veux rechercher un adhérent.
 
 - Je peux chercher par nom, adresse, email, facture.
@@ -58,6 +60,10 @@
 
 - Dans Dolibarr, module DYBccr -> Reporting inscription.
 - L'écran présente, en nb et en montant, les totaux des inscriptions sur les 3 dernières années.
+  - par activité : En nombre et montant
+  - par type d'activité, en nombre
+  - par type de domaine, en nombre et montant
+  - par ttype de paiement, en nombre et montant
 
 ## en tant que dybuser, je souhaite clôturer une facture à 0€
 

@@ -555,7 +555,7 @@ class modDYBccr extends DolibarrModules
 	$this->menu[$r++] = array(
 		'fk_menu'  => 'fk_mainmenu=dybccr',
 		'type'     => 'left',
-		'titre'    => 'Reporting inscription',
+		'titre'    => 'Reporting inscriptions',
 		'prefix'   => img_picto('', 'bill', 'class="pictofixedwidth valignmiddle paddingright"'),
 		'mainmenu' => 'dybccr',
 		'leftmenu' => 'dybccr_import_adhesions',
@@ -609,7 +609,7 @@ class modDYBccr extends DolibarrModules
         'leftmenu'     => 'dybccr',
         'url'          => '',
         'position'     => 1000 + $r, // Position dans le menu
-        'enabled'      => 'isModEnabled("dybccr")',
+       'enabled'  => 'false',
         'perms'        => '$user->admin',
         'target'       => '',
         'user'         => 2,
@@ -640,12 +640,12 @@ class modDYBccr extends DolibarrModules
 			'url'      => '/dybccr/pageimport_adhesions.php',
 			'langs'    => 'dybccr@dybccr',
 			'position' => 1000 + $r,
-			'enabled'  => 'isModEnabled("dybccr")',
+			'enabled'  => 'false',
 			'perms'    => '$user->admin',
 			'target'   => '',
 			'user'     => 0,
 		);
-		
+		/* 'enabled'  => 'isModEnabled("dybccr")',*/
 		/* END MODULEBUILDER LEFTMENU MYOBJECT */
 
 
