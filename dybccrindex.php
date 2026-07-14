@@ -137,10 +137,11 @@ require_once DOL_DOCUMENT_ROOT.'/core/lib/parsemd.lib.php';
 $dybdocContent = file_exists(__DIR__.'/README.md') ? file_get_contents(__DIR__.'/README.md') : '';
 print '<div id="dybdoc">'.dolMd2Html($dybdocContent).'</div>';
 
-print '</div>';
-print "<img src='".DOL_MAIN_URL_ROOT."/custom/dybccr/img/inscriptions_CCR_2026.png' style='width:400px'>";
+print '</div><hr/>';
+print "<img src='".DOL_MAIN_URL_ROOT."/custom/dybccr/img/Processus inscription.jpg' style='width:800px'><hr/>";
+print "<img src='".DOL_MAIN_URL_ROOT."/custom/dybccr/img/inscriptions_CCR_2026.png' style='width:400px'><hr/>";
 
-print "<img src='".DOL_MAIN_URL_ROOT."/custom/dybccr/img/Processus_inscription_détaille.jpg' style='width:800px'>";
+print "<img src='".DOL_MAIN_URL_ROOT."/custom/dybccr/img/Processus_inscription_détaille.jpg' style='width:800px'><hr/>";
 
 
 

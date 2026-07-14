@@ -54,10 +54,15 @@
   5. imprimer le document de clôture de caisse et le joindre aux chèques, espèces, CB reçus.
   6. transmettre le tout à la comptabilité (YB, si j'ai bien compris).
 
-## E- Dans Dolibarr, module DYBccr -> clôture de caisse,.
+## en tant que dybuser, je souhaite voir le reporting inscription,.
 
 - Dans Dolibarr, module DYBccr -> Reporting inscription.
-- L'acran présente, en nb et en montant, les totaux des inscriptions sur les 3 dernières années.
+- L'écran présente, en nb et en montant, les totaux des inscriptions sur les 3 dernières années.
+
+## en tant que dybuser, je souhaite clôturer une facture à 0€
+
+- Dans Dolibarr, facture paiement,
+- ouvrir la facture, cliquer sur 'classer payée'.
 
 # Documentation utilisateur DYBWeb
 

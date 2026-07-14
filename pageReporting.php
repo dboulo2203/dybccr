@@ -47,7 +47,7 @@ $langs->loadLangs(array("dybccr@dybccr"));
 
 // ---- Paramètres ----
 $tab = GETPOST('tab', 'aZ09');
-$allowedTabs = array('activites', 'montants');
+$allowedTabs = array('activites', 'montants', 'typesactivite', 'typesdomaine', 'typesdomainemontants', 'modespaiement');
 if (!in_array($tab, $allowedTabs, true)) {
 	$tab = 'activites';
 }
@@ -61,8 +61,12 @@ llxHeader('', 'Reporting', '', '', 0, 0, '', '', '', 'mod-dybccr page-reporting'
 print load_fiche_titre('Reporting', '', 'dybccr.png@dybccr');
 
 $head = array();
-$head[0] = array($_SERVER['PHP_SELF'].'?tab=activites', 'Activités', 'activites');
-$head[1] = array($_SERVER['PHP_SELF'].'?tab=montants', 'Montants', 'montants');
+$head[0] = array($_SERVER['PHP_SELF'].'?tab=activites', 'Activités (nb)', 'activites');
+$head[1] = array($_SERVER['PHP_SELF'].'?tab=montants', 'Activités (€)', 'montants');
+$head[2] = array($_SERVER['PHP_SELF'].'?tab=typesactivite', "Type d'activité (nb)", 'typesactivite');
+$head[3] = array($_SERVER['PHP_SELF'].'?tab=typesdomaine', 'Type de domaine (nb)', 'typesdomaine');
+$head[4] = array($_SERVER['PHP_SELF'].'?tab=typesdomainemontants', 'Type de domaine (€)', 'typesdomainemontants');
+$head[5] = array($_SERVER['PHP_SELF'].'?tab=modespaiement', 'Mode de paiement (€)', 'modespaiement');
 
 print dol_get_fiche_head($head, $tab, '', -1, '');
 
@@ -95,7 +99,7 @@ $years = array_reverse($years); // du plus ancien au plus récent
 
 // ---- Liste des activités (services), avec leur code activité ----
 $products = array();
-$sqlProducts  = "SELECT p.rowid, p.ref, p.label, pe.type_activite";
+$sqlProducts  = "SELECT p.rowid, p.ref, p.label, pe.type_activite, pe.type_domaine";
 $sqlProducts .= " FROM ".MAIN_DB_PREFIX."product AS p";
 $sqlProducts .= " LEFT JOIN ".MAIN_DB_PREFIX."product_extrafields AS pe ON pe.fk_object = p.rowid";
 $sqlProducts .= " WHERE p.entity IN (".getEntity('product').")";
@@ -108,6 +112,7 @@ if ($resProducts) {
 			'ref'           => $obj->ref,
 			'label'         => $obj->label,
 			'type_activite' => $obj->type_activite,
+			'type_domaine'  => $obj->type_domaine,
 		);
 	}
 }
@@ -157,6 +162,118 @@ if (!empty($years)) {
 	}
 }
 
+// ---- Nombre de lignes de facture par type d'activité (regroupement des activités par leur code activité) ----
+$typeActivities = array();
+$sqlTypes = "SELECT rowid, label FROM ".MAIN_DB_PREFIX."c_typeactivity WHERE active = 1 ORDER BY label ASC";
+$resTypes = $db->query($sqlTypes);
+if ($resTypes) {
+	while ($obj = $db->fetch_object($resTypes)) {
+		$typeActivities[] = array('rowid' => (int) $obj->rowid, 'ref' => '', 'label' => $obj->label);
+	}
+}
+
+$countsByType = array();
+foreach ($products as $p) {
+	$typeId = (int) $p['type_activite'];
+	if (!isset($counts[$p['rowid']])) {
+		continue;
+	}
+	foreach ($counts[$p['rowid']] as $yearId => $nb) {
+		$countsByType[$typeId][$yearId] = (isset($countsByType[$typeId][$yearId]) ? $countsByType[$typeId][$yearId] : 0) + $nb;
+	}
+}
+if (isset($countsByType[0])) {
+	$typeActivities[] = array('rowid' => 0, 'ref' => '', 'label' => 'Non catégorisé');
+}
+
+$typeActivitiesAdhesion = array();
+$typeActivitiesAutres = array();
+foreach ($typeActivities as $t) {
+	if ($adhesionTypeId > 0 && $t['rowid'] === $adhesionTypeId) {
+		$typeActivitiesAdhesion[] = $t;
+	} else {
+		$typeActivitiesAutres[] = $t;
+	}
+}
+
+// ---- Nombre de lignes de facture par type de domaine ----
+$typeDomains = array();
+$sqlDomains = "SELECT rowid, label FROM ".MAIN_DB_PREFIX."c_typedomain WHERE active = 1 ORDER BY label ASC";
+$resDomains = $db->query($sqlDomains);
+if ($resDomains) {
+	while ($obj = $db->fetch_object($resDomains)) {
+		$typeDomains[] = array('rowid' => (int) $obj->rowid, 'ref' => '', 'label' => $obj->label);
+	}
+}
+
+$countsByDomain = array();
+$amountsByDomain = array();
+foreach ($products as $p) {
+	$domainId = (int) $p['type_domaine'];
+	if (!isset($counts[$p['rowid']])) {
+		continue;
+	}
+	foreach ($counts[$p['rowid']] as $yearId => $nb) {
+		$countsByDomain[$domainId][$yearId] = (isset($countsByDomain[$domainId][$yearId]) ? $countsByDomain[$domainId][$yearId] : 0) + $nb;
+	}
+	foreach ($amounts[$p['rowid']] as $yearId => $amount) {
+		$amountsByDomain[$domainId][$yearId] = (isset($amountsByDomain[$domainId][$yearId]) ? $amountsByDomain[$domainId][$yearId] : 0) + $amount;
+	}
+}
+if (isset($countsByDomain[0])) {
+	$typeDomains[] = array('rowid' => 0, 'ref' => '', 'label' => 'Non catégorisé');
+}
+
+// ---- Rowid du domaine "Adhésion" : pour scinder les tableaux de montant en 2 ----
+$adhesionDomainId = 0;
+$sqlAdhesionDomain = "SELECT rowid FROM ".MAIN_DB_PREFIX."c_typedomain WHERE label = 'Adhésion'";
+$resAdhesionDomain = $db->query($sqlAdhesionDomain);
+if ($resAdhesionDomain && $db->num_rows($resAdhesionDomain) > 0) {
+	$adhesionDomainId = (int) $db->fetch_object($resAdhesionDomain)->rowid;
+}
+
+$domainsAdhesion = array();
+$domainsAutres = array();
+foreach ($typeDomains as $d) {
+	if ($adhesionDomainId > 0 && $d['rowid'] === $adhesionDomainId) {
+		$domainsAdhesion[] = $d;
+	} else {
+		$domainsAutres[] = $d;
+	}
+}
+
+// ---- Montants payés par mode de paiement ----
+$paymentModes = array();
+$sqlPaymentModes = "SELECT id, libelle FROM ".MAIN_DB_PREFIX."c_paiement WHERE active = 1 ORDER BY libelle ASC";
+$resPaymentModes = $db->query($sqlPaymentModes);
+if ($resPaymentModes) {
+	while ($obj = $db->fetch_object($resPaymentModes)) {
+		$paymentModes[] = array('rowid' => (int) $obj->id, 'ref' => '', 'label' => $obj->libelle);
+	}
+}
+
+$amountsByPaymentMode = array();
+$countsByPaymentMode = array();
+if (!empty($years)) {
+	$sqlPayments  = "SELECT pa.fk_paiement AS mode_id, fe.inv_culturalseason AS year_id,";
+	$sqlPayments .= " COUNT(pf.rowid) AS nb_payments, SUM(pf.amount) AS total_amount";
+	$sqlPayments .= " FROM ".MAIN_DB_PREFIX."paiement_facture AS pf";
+	$sqlPayments .= " INNER JOIN ".MAIN_DB_PREFIX."paiement AS pa ON pa.rowid = pf.fk_paiement";
+	$sqlPayments .= " INNER JOIN ".MAIN_DB_PREFIX."facture AS f ON f.rowid = pf.fk_facture";
+	$sqlPayments .= " INNER JOIN ".MAIN_DB_PREFIX."facture_extrafields AS fe ON fe.fk_object = f.rowid";
+	$sqlPayments .= " WHERE fe.inv_culturalseason IN (".implode(',', $yearIds).")";
+	$sqlPayments .= " AND f.entity IN (".getEntity('facture').")";
+	$sqlPayments .= " GROUP BY pa.fk_paiement, fe.inv_culturalseason";
+
+	$resPayments = $db->query($sqlPayments);
+	if ($resPayments) {
+		while ($obj = $db->fetch_object($resPayments)) {
+			$amountsByPaymentMode[(int) $obj->mode_id][(int) $obj->year_id] = (float) $obj->total_amount;
+			$countsByPaymentMode[(int) $obj->mode_id][(int) $obj->year_id] = (int) $obj->nb_payments;
+		}
+	}
+}
+
 // ---- Affichage d'un tableau (titre, sous-ensemble de produits, valeurs, formateur de cellule) ----
 $printActivityTable = function ($title, $productsSubset, $valuesMatrix, $formatter) use ($years) {
 	$totals = array();
@@ -188,7 +305,8 @@ $printActivityTable = function ($title, $productsSubset, $valuesMatrix, $formatt
 
 	foreach ($productsSubset as $p) {
 		print '<tr class="oddeven">';
-		print '<td>'.dol_escape_htmltag($p['ref'].' - '.$p['label']).'</td>';
+		$rowLabel = ($p['ref'] !== '') ? $p['ref'].' - '.$p['label'] : $p['label'];
+		print '<td>'.dol_escape_htmltag($rowLabel).'</td>';
 		foreach ($years as $y) {
 			$val = isset($valuesMatrix[$p['rowid']][$y['rowid']]) ? $valuesMatrix[$p['rowid']][$y['rowid']] : 0;
 			print '<td class="right">'.$formatter($val).'</td>';
@@ -215,6 +333,22 @@ if ($tab === 'activites') {
 	$printActivityTable('Adhésions', $productsAdhesion, $amounts, $amountFormatter);
 	print '<br>';
 	$printActivityTable('Autres activités', $productsAutres, $amounts, $amountFormatter);
+} elseif ($tab === 'typesactivite') {
+	$printActivityTable("Nombre de lignes - Type d'activité Adhésion", $typeActivitiesAdhesion, $countsByType, $intFormatter);
+	print '<br>';
+	$printActivityTable("Nombre de lignes - Autres types d'activité", $typeActivitiesAutres, $countsByType, $intFormatter);
+} elseif ($tab === 'typesdomaine') {
+	$printActivityTable('Nombre de lignes - Domaine Adhésion', $domainsAdhesion, $countsByDomain, $intFormatter);
+	print '<br>';
+	$printActivityTable('Nombre de lignes - Autres domaines', $domainsAutres, $countsByDomain, $intFormatter);
+} elseif ($tab === 'typesdomainemontants') {
+	$printActivityTable('Montant TTC - Domaine Adhésion', $domainsAdhesion, $amountsByDomain, $amountFormatter);
+	print '<br>';
+	$printActivityTable('Montant TTC - Autres domaines', $domainsAutres, $amountsByDomain, $amountFormatter);
+} elseif ($tab === 'modespaiement') {
+	$printActivityTable('Montants par mode de paiement', $paymentModes, $amountsByPaymentMode, $amountFormatter);
+	print '<br>';
+	$printActivityTable('Nombre de paiements par mode de paiement', $paymentModes, $countsByPaymentMode, $intFormatter);
 }
 
 print dol_get_fiche_end();
