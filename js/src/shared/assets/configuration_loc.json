@@ -1,0 +1,80 @@
+{
+  "BrandTitle": "CCR - DYB V2",
+  "wsUrlformel": "http://localhost/dolibarrccr/api/index.php/",
+  "version": "Powered by Cercle Celtique de Rennes  - DYB Application - v 1.0.0 -15/03/2026",
+  "leftMenu": [
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-box-arrow-in-right'></i>",
+      "menuItemid": "login",
+      "menuItemName": "Log",
+      "menuItemAction": "functionCall",
+      "menuItemLink": "loginViewDisplay()"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-brightness-high'></i>",
+      "menuItemid": "theme",
+      "menuItemName": "Theme",
+      "menuItemAction": "functionCall",
+      "menuItemLink": "toogleTheme()"
+    },
+    {
+      "menuItemType": "hr",
+      "menuItemIcon": "",
+      "menuItemid": "",
+      "menuItemName": "",
+      "menuItemAction": "",
+      "menuItemLink": ""
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-person'></i>",
+      "menuItemid": "Recherche",
+      "menuItemName": "Recherche",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/search"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-box'></i>",
+      "menuItemid": "Liste",
+      "menuItemName": "Listes d'adhérents",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/selectionjs"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-list-ul'></i>",
+      "menuItemid": "Course",
+      "menuItemName": "Activités",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/course"
+    },
+    {
+      "menuItemType": "menuitem",
+      "menuItemIcon": "<i class='bi bi-house'></i>",
+      "menuItemid": "Documentation",
+      "menuItemName": "Documentation",
+      "menuItemAction": "urlCall",
+      "menuItemLink": "views/docu/docu.html"
+    }
+  ],
+  "PMealDay": "218",
+  "MMealDay": "219",
+  "SMealDay": "220",
+  "RefTaxes": "294",
+  "depositpercent": 0.3,
+  "defaultpricelevel": 8,
+  "defaultpublipostage": 1,
+  "daybefore": {
+    "P": 0,
+    "M": 0,
+    "S": 1
+  },
+  "dayafter": {
+    "P": 0,
+    "M": 1,
+    "S": 1
+  }
+}

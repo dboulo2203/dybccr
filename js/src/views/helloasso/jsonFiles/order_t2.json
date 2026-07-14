@@ -1,0 +1,171 @@
+{
+    "order": {
+        "id": 132320899,
+        "date": "2025-05-19T14:56:52.1261896+02:00",
+        "formSlug": "stage-de-gallo",
+        "formType": "Event",
+        "organizationName": "Cercle Celtique de Rennes",
+        "organizationSlug": "cercle-celtique-de-rennes",
+        "organizationType": "Association1901Rig",
+        "organizationIsUnderColucheLaw": false,
+        "formName": "Stage de Gallo",
+        "meta": {
+            "createdAt": "2025-05-19T14:52:20.0820256+02:00",
+            "updatedAt": "2025-05-19T14:56:52.3047864+02:00"
+        },
+        "isAnonymous": false,
+        "isAmountHidden": false
+    },
+    "payer": {
+        "email": "marite.quimbert@hotmail.fr",
+        "country": "FRA",
+        "firstName": "Marité",
+        "lastName": "QUIMBERT"
+    },
+    "payments": [
+        {
+            "cashOutState": "CashedOut",
+            "shareAmount": 2000,
+            "id": 60567699,
+            "amount": 2000,
+            "date": "2025-05-19T14:56:52.1261896+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-05-19T14:52:20.0820256+02:00",
+                "updatedAt": "2025-06-10T03:34:08.9682322+02:00"
+            },
+            "refundOperations": []
+        }
+    ],
+    "name": "La journée",
+    "user": {
+        "firstName": "Marité",
+        "lastName": "QUIMBERT"
+    },
+    "priceCategory": "Fixed",
+    "ticketUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/stage-de-gallo/ticket?ticketId=132320899&ag=132320899",
+    "qrCode": "MTMyMzIwODk5OjYzODgzMjYzMTQwMDgyMDI1Ng==",
+    "tierId": 16156097,
+    "id": 132320899,
+    "amount": 2000,
+    "type": "Registration",
+    "initialAmount": 2000,
+    "state": "Processed"
+}
+
+
+{
+    "order": {
+        "id": 147960965,
+        "date": "2025-09-14T20:58:53.5013216+02:00",
+        "formSlug": "adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026",
+        "formType": "Membership",
+        "organizationName": "Cercle Celtique de Rennes",
+        "organizationSlug": "cercle-celtique-de-rennes",
+        "organizationType": "Association1901Rig",
+        "organizationIsUnderColucheLaw": false,
+        "formName": "Adhésions et inscriptions au Cercle Celtique de Rennes saison 2025-2026",
+        "meta": {
+            "createdAt": "2025-09-14T20:57:08.2085683+02:00",
+            "updatedAt": "2025-09-14T20:58:53.7683952+02:00"
+        },
+        "isAnonymous": false,
+        "isAmountHidden": false
+    },
+    "payer": {
+        "email": "Mariehuteau97@orange.fr",
+        "country": "FRA",
+        "firstName": "Marie",
+        "lastName": "Hortollary"
+    },
+    "payments": [
+        {
+            "cashOutState": "Transfered",
+            "shareAmount": 2500,
+            "id": 67917267,
+            "amount": 122300,
+            "date": "2025-09-14T20:58:53.5013216+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-09-14T20:57:08.2085683+02:00",
+                "updatedAt": "2025-09-14T20:58:53.53+02:00"
+            },
+            "refundOperations": []
+        }
+    ],
+    "name": "Adhésion pour le 2è membre de la famille",
+    "user": {
+        "firstName": "Bruno ",
+        "lastName": "Hortollary "
+    },
+    "priceCategory": "Fixed",
+    "customFields": [
+        {
+            "id": 6275825,
+            "name": "Civilité",
+            "type": "ChoiceList",
+            "answer": "Monsieur "
+        },
+        {
+            "id": 6275826,
+            "name": "date de naissance",
+            "type": "Date",
+            "answer": "29/01/1998"
+        },
+        {
+            "id": 6275827,
+            "name": "Code postal",
+            "type": "Zipcode",
+            "answer": "35200"
+        },
+        {
+            "id": 6275828,
+            "name": "ville",
+            "type": "TextInput",
+            "answer": "Rennes"
+        },
+        {
+            "id": 6275829,
+            "name": "n° de téléphone",
+            "type": "Phone",
+            "answer": "06.68.82.50.88"
+        },
+        {
+            "id": 6275830,
+            "name": "adresse courriel",
+            "type": "TextInput",
+            "answer": "Hortobubu@gmail.com"
+        }
+    ],
+    "options": [
+        {
+            "name": "M06a - Flûte",
+            "amount": 34000,
+            "priceCategory": "Fixed",
+            "isRequired": false,
+            "customFields": [],
+            "optionId": 17567663
+        },
+        {
+            "name": "M15 - Musique irlandaise en ensemble ",
+            "amount": 24000,
+            "priceCategory": "Fixed",
+            "isRequired": false,
+            "customFields": [],
+            "optionId": 17567672
+        }
+    ],
+    "qrCode": "MTQ3OTYwOTcwOjYzODkzNDgwMjI4MjA4NTY4Mw==",
+    "membershipCardUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/adhesions/adhesions-et-inscriptions-au-cercle-celtique-de-rennes-saison-2025-2026/carte-adherent?cardId=147960970&ag=147960970",
+    "tierDescription": "",
+    "tierId": 17567649,
+    "id": 147960970,
+    "amount": 2500,
+    "type": "Membership",
+    "initialAmount": 2500,
+    "state": "Processed"
+}

@@ -1,0 +1,5 @@
+DYBCCR_DYBWEB_OPEN = Ouvrir l'accès à DYBWEB
+DYBCCR_DYBWEB_CLOSE_MESSAGE = Message affiché lorsque DYBWEB est fermé
+DYBCCR_DYBWEB_CURRENT_SEASON = Code (id) de la saison en cours d'inscription sur DYBWEB
+DYBCCR_DYBWEB_INFORMATION_MESSAGE :message affiché en en-tête de DYBWEB
+ModuleDYBccrName=Dyb CCR

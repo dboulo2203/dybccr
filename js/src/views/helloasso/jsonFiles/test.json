@@ -1,0 +1,57 @@
+{
+    "order": {
+        "id": 138560411,
+        "date": "2025-06-20T23:39:34.0328789+02:00",
+        "formSlug": "fete-de-fin-de-saison-repas",
+        "formType": "Event",
+        "organizationName": "Cercle Celtique de Rennes",
+        "organizationSlug": "cercle-celtique-de-rennes",
+        "organizationType": "Association1901Rig",
+        "organizationIsUnderColucheLaw": false,
+        "formName": "Fête de fin de saison - Repas",
+        "meta": {
+            "createdAt": "2025-06-20T23:38:19.9778852+02:00",
+            "updatedAt": "2025-06-20T23:39:34.1940705+02:00"
+        },
+        "isAnonymous": false,
+        "isAmountHidden": false
+    },
+    "payer": {
+        "email": "cecilemessager@hotmail.fr",
+        "country": "FRA",
+        "firstName": "Cécile",
+        "lastName": "Messager"
+    },
+    "payments": [
+        {
+            "cashOutState": "CashedOut",
+            "shareAmount": 600,
+            "id": 62899987,
+            "amount": 1600,
+            "date": "2025-06-20T23:39:34.0328789+02:00",
+            "paymentMeans": "Card",
+            "installmentNumber": 1,
+            "state": "Authorized",
+            "meta": {
+                "createdAt": "2025-06-20T23:38:19.9778852+02:00",
+                "updatedAt": "2025-07-08T07:03:14.1827316+02:00"
+            },
+            "refundOperations": []
+        }
+    ],
+    "name": "Repas Enfant",
+    "user": {
+        "firstName": "Cécile ",
+        "lastName": "Messager "
+    },
+    "priceCategory": "Fixed",
+    "ticketUrl": "https://www.helloasso.com/associations/cercle-celtique-de-rennes/evenements/fete-de-fin-de-saison-repas/ticket?ticketId=138560412&ag=138560411",
+    "qrCode": "MTM4NTYwNDEyOjYzODg2MDU5NDk5OTc3ODg1Mg==",
+    "tierDescription": "1 galette-saucisse + 2 crêpes + 2 boissons",
+    "tierId": 16591377,
+    "id": 138560412,
+    "amount": 600,
+    "type": "Registration",
+    "initialAmount": 600,
+    "state": "Processed"
+}
