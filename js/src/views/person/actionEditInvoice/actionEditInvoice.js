@@ -51,7 +51,7 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
               <div class="d-flex justify-content-between align-items-center mb-2 mt-2">
                 <span class="text-muted small">Nouveaux paiements</span>
                 <button type="button" class="btn btn-sm btn-outline-secondary" id="${modalId}-add-payment">
-                  <i class="bi bi-plus"></i> Ajouter
+                  <i class="bi bi-plus"></i> Ajouter paiement
                 </button>
               </div>
               <div id="${modalId}-payments"><p class="text-muted small">Aucun nouveau paiement.</p></div>
@@ -116,15 +116,24 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
       document.getElementById(`${modalId}-remaining`).textContent = getFormattedCurrency(computeRemaining());
     };
 
+    const formatPaymentDate = (dateStr) => {
+      if (!dateStr) return '';
+      const [datePart] = String(dateStr).split(' ');
+      const [y, m, d] = datePart.split('-');
+      return (y && m && d) ? `${d}/${m}/${y}` : dateStr;
+    };
+
     const renderExistingPayments = () => {
       const allTypes = getPaymentTypes() || [];
       const el = document.getElementById(`${modalId}-existing-payments`);
       if (!existingPayments.length) { el.innerHTML = ''; return; }
       let html = '<div class="d-flex flex-column gap-1">';
       existingPayments.forEach((p) => {
-        const typeCode = allTypes.find((t) => String(t.id) === String(p.fk_typepaiement))?.code ?? '';
+        const type = allTypes.find((t) => t.code === p.type);
+        const typeLabel = type ? `${type.code} - ${type.label}` : (p.type || '');
         html += `<div class="d-flex gap-3 small text-muted border rounded px-2 py-1 bg-light">
-          <span class="fw-semibold">${typeCode}</span>
+          <span class="fw-semibold">${typeLabel}</span>
+          <span>${formatPaymentDate(p.date)}</span>
           <span class="flex-grow-1">${getFormattedCurrency(Number(p.amount ?? 0))}</span>
           <span class="fst-italic">existant</span>
         </div>`;
@@ -142,13 +151,13 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
         return;
       }
       const typeOptions = (selectedId) => allTypes.map((t) =>
-        `<option value="${t.id}" ${String(t.id) === String(selectedId) ? 'selected' : ''}>${t.code}</option>`
+        `<option value="${t.id}" ${String(t.id) === String(selectedId) ? 'selected' : ''}>${t.code} - ${t.label}</option>`
       ).join('');
 
       let html = '<div class="d-flex flex-column gap-2">';
       payments.forEach((p, i) => {
         html += `<div class="d-flex gap-2 align-items-center">
-          <select class="form-select form-select-sm" style="width:110px" id="${modalId}-ptype-${i}">${typeOptions(p.type?.id)}</select>
+          <select class="form-select form-select-sm" style="width:220px" id="${modalId}-ptype-${i}">${typeOptions(p.type?.id)}</select>
           <input type="number" class="form-control form-control-sm" style="width:120px" id="${modalId}-pamount-${i}" value="${p.amount}" min="0" step="0.01">
           <button type="button" class="btn btn-sm btn-outline-danger" id="${modalId}-pdel-${i}"><i class="bi bi-trash"></i></button>
         </div>`;
@@ -259,7 +268,12 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
     });
 
     // *** Save invoice action
-    document.getElementById(`${modalId}-save`).addEventListener('click', async () => {
+    const saveButton = document.getElementById(`${modalId}-save`);
+    const saveButtonOriginalHtml = saveButton.innerHTML;
+
+    saveButton.addEventListener('click', async () => {
+      saveButton.disabled = true;
+      saveButton.innerHTML = '<i class="bi bi-hourglass-split me-1"></i>Sauver';
       try {
         const culturalseason = document.getElementById(`${modalId}-culturalseason`).value;
         if (!culturalseason) throw new Error('Veuillez choisir une saison culturelle');
@@ -290,6 +304,8 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
         if (onSaveCallback) await onSaveCallback();
       } catch (error) {
         document.getElementById(`${modalId}-alert`).innerHTML = displayAlert('alert-danger', error.message || error);
+        saveButton.disabled = false;
+        saveButton.innerHTML = saveButtonOriginalHtml;
       }
     });
 

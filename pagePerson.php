@@ -99,8 +99,21 @@ if (!$person) {
 }
 
 // ---- Zone identité ----
-print '<div class="fichecenter" style="border:1px solid #ccc; padding:10px; border-radius:3px;">';
-print '<div class="underbanner clearboth"></div>';
+print '<div class="fichecenter" style="border:1px solid #ccc; border-radius:3px; overflow:hidden;">';
+
+print '<div style="background-color:#f0f0f0; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">';
+print '<span style="font-weight:bold;">Identité de l\'adhérent</span>';
+print '<div class="dropdown">';
+print '<button type="button" class="btn btn-sm btn-link p-0" data-bs-toggle="dropdown" aria-expanded="false" title="Actions">';
+print '<i class="bi bi-three-dots-vertical"></i>';
+print '</button>';
+print '<ul class="dropdown-menu dropdown-menu-end">';
+print '<li><a class="dropdown-item" href="pageEditPerson.php?id='.((int) $socid).'">Éditer</a></li>';
+print '</ul>';
+print '</div>';
+print '</div>';
+
+print '<div style="padding:10px;">';
 print '<table class="border centpercent">';
 
 print '<tr>';
@@ -133,17 +146,33 @@ print '</tr>';
 
 print '</table>';
 print '</div>';
+print '</div>';
 
 // ---- Zone factures d'inscription ----
-print load_fiche_titre("Factures d'inscription", '', '');
+print '<div class="fichecenter" style="border:1px solid #ccc; border-radius:3px; overflow:hidden;">';
 
-$sqlInv  = "SELECT f.rowid, f.ref, f.datef, f.total_ttc, f.fk_statut, cy.label AS year_label";
+print '<div style="background-color:#f0f0f0; padding:8px 12px; display:flex; justify-content:space-between; align-items:center;">';
+print '<span style="font-weight:bold;">Factures d\'inscription</span>';
+print '<div class="dropdown">';
+print '<button type="button" class="btn btn-sm btn-link p-0" data-bs-toggle="dropdown" aria-expanded="false" title="Actions">';
+print '<i class="bi bi-three-dots-vertical"></i>';
+print '</button>';
+print '<ul class="dropdown-menu dropdown-menu-end">';
+print '<li><a class="dropdown-item dyb-create-invoice" href="#">Créer une facture</a></li>';
+print '</ul>';
+print '</div>';
+print '</div>';
+
+print '<div style="padding:10px;">';
+
+$sqlInv  = "SELECT f.rowid, f.ref, f.datef, f.datec, f.total_ttc, f.fk_statut, cy.label AS year_label,";
+$sqlInv .= " (SELECT SUM(pf.amount) FROM ".MAIN_DB_PREFIX."paiement_facture AS pf WHERE pf.fk_facture = f.rowid) AS paid_amount";
 $sqlInv .= " FROM ".MAIN_DB_PREFIX."facture AS f";
 $sqlInv .= " LEFT JOIN ".MAIN_DB_PREFIX."facture_extrafields AS fe ON fe.fk_object = f.rowid";
 $sqlInv .= " LEFT JOIN ".MAIN_DB_PREFIX."c_yearexercice AS cy ON cy.rowid = fe.inv_culturalseason";
 $sqlInv .= " WHERE f.fk_soc = ".((int) $socid);
 $sqlInv .= " AND f.entity IN (".getEntity('facture').")";
-$sqlInv .= " ORDER BY f.datef DESC";
+$sqlInv .= " ORDER BY f.datec DESC";
 
 $resInv = $db->query($sqlInv);
 
@@ -169,10 +198,14 @@ if (!$resInv) {
 
 		print '<tr class="oddeven" style="font-weight:bold">';
 		print '<td>'.dol_escape_htmltag($invoice->year_label).'</td>';
-		print '<td>'.dol_escape_htmltag($invoice->ref).'</td>';
-		print '<td>'.dol_print_date($db->jdate($invoice->datef), 'day').'</td>';
+		print '<td>'.dol_escape_htmltag($invoice->ref).' ('.((int) $invoice->rowid).')</td>';
+		print '<td>'.dol_print_date($db->jdate($invoice->datec), 'dayhour').'</td>';
 		print '<td class="right">'.price($invoice->total_ttc).'</td>';
-		print '<td>'.dol_escape_htmltag($statusLabel).'</td>';
+		$statusCell = dol_escape_htmltag($statusLabel);
+		if (!empty($invoice->paid_amount) && (float) $invoice->paid_amount > 0) {
+			$statusCell .= ' (Payé : '.price($invoice->paid_amount).')';
+		}
+		print '<td>'.$statusCell.'</td>';
 		print '<td class="right">';
 		if ($isEditable) {
 			print '<div class="dropdown">';
@@ -212,10 +245,14 @@ if (!$resInv) {
 	print '</div>';
 }
 
-// ---- Édition de facture (modal réutilisé depuis js/src/views/person/actionEditInvoice) ----
+print '</div>';
+print '</div>';
+
+// ---- Édition et création de facture (modals réutilisés depuis js/src/views/person) ----
 ?>
 <script type="module" nonce="<?php echo getNonce(); ?>">
 	import { displayActionEditInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/views/person/actionEditInvoice/actionEditInvoice.js';
+	import { displayActionCreateInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/views/person/actionCreateInvoice/actionCreateInvoice.js';
 	import { loadProducts } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrProductServices.js';
 	import { loadPaymentTypesTable, loadYearExerciceTable } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrListsServices.js';
 	import { getInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrInvoicesServices.js';
@@ -224,7 +261,7 @@ if (!$resInv) {
 		wsUrlformel: '<?php echo DOL_URL_ROOT; ?>/api/index.php/',
 	}));
 
-	const customer = { name: <?php echo json_encode($person->nom); ?> };
+	const customer = { id: <?php echo (int) $socid; ?>, name: <?php echo json_encode($person->nom); ?> };
 	let referenceDataLoaded = false;
 
 	async function ensureReferenceData() {
@@ -240,6 +277,20 @@ if (!$resInv) {
 				await ensureReferenceData();
 				const invoice = await getInvoice(link.dataset.invoiceId);
 				await displayActionEditInvoice(invoice, customer, async () => {
+					location.reload();
+				});
+			} catch (error) {
+				alert(error.message || error);
+			}
+		});
+	});
+
+	document.querySelectorAll('.dyb-create-invoice').forEach((link) => {
+		link.addEventListener('click', async (e) => {
+			e.preventDefault();
+			try {
+				await ensureReferenceData();
+				await displayActionCreateInvoice(customer, async () => {
 					location.reload();
 				});
 			} catch (error) {

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : cerclecedyb.mysql.db
--- Généré le : mar. 14 juil. 2026 à 01:57
+-- Généré le : mer. 15 juil. 2026 à 23:56
 -- Version du serveur : 8.4.8-8
--- Version de PHP : 8.4.10
+-- Version de PHP : 8.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,9 +18,6 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `cerclecedyb`
---
-
 -- --------------------------------------------------------
 
 --
@@ -1797,7 +1794,15 @@ INSERT INTO `llx_actioncomm` (`id`, `ref`, `ref_ext`, `entity`, `datep`, `datep2
 (1545, '1545', NULL, 1, '2026-07-13 16:07:02', '2026-07-13 16:07:02', 40, 'AC_COMPANY_CREATE', '2026-07-13 16:07:02', '2026-07-13 14:07:02', 1, NULL, NULL, NULL, 458, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Tiers ZAOUR Nolwenn créé', 'Tiers ZAOUR Nolwenn créé', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL, NULL, '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
 (1546, '1546', NULL, 1, '2026-07-13 16:07:02', '2026-07-13 16:07:02', 40, 'AC_BILL_VALIDATE', '2026-07-13 16:07:02', '2026-07-13 14:07:02', 1, NULL, NULL, NULL, 458, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Facture FA2510-0459 validée', 'Facture FA2510-0459 validée', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 463, 'invoice', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
 (1547, '1547', NULL, 1, '2026-07-13 16:07:02', '2026-07-13 16:07:02', 40, 'AC_BILL_PAYED', '2026-07-13 16:07:02', '2026-07-13 14:07:02', 1, NULL, NULL, NULL, 458, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Facture FA2510-0459 passée à payée', 'Facture FA2510-0459 passée à payée\nInvoice set to paid by the payment->create() of payment PAY2510-0459 because the remain to pay is 0', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 463, 'invoice', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
-(1548, '1548', NULL, 1, '2026-07-14 01:38:14', '2026-07-14 01:38:14', 40, 'AC_PRODUCT_MODIFY', '2026-07-14 01:38:14', '2026-07-13 23:38:14', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Produit A01 modifié', 'Produit A01 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 'product', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL);
+(1548, '1548', NULL, 1, '2026-07-14 01:38:14', '2026-07-14 01:38:14', 40, 'AC_PRODUCT_MODIFY', '2026-07-14 01:38:14', '2026-07-13 23:38:14', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Produit A01 modifié', 'Produit A01 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 1, 'product', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1549, '1549', NULL, 1, '2026-07-15 00:07:01', '2026-07-15 00:07:01', 40, 'AC_PRODUCT_MODIFY', '2026-07-15 00:07:01', '2026-07-14 22:07:01', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Produit L03 modifié', 'Produit L03 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 28, 'product', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1550, '1550', NULL, 1, '2026-07-15 00:15:04', '2026-07-15 00:15:04', 40, 'AC_PRODUCT_MODIFY', '2026-07-15 00:15:04', '2026-07-14 22:15:04', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Produit AUT02 modifié', 'Produit AUT02 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 11, 'product', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1551, '1551', NULL, 1, '2026-07-15 00:15:05', '2026-07-15 00:15:05', 40, 'AC_PRODUCT_MODIFY', '2026-07-15 00:15:05', '2026-07-14 22:15:05', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Produit AUT02 modifié', 'Produit AUT02 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 11, 'product', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1552, '1552', NULL, 1, '2026-07-15 00:22:24', '2026-07-15 00:22:24', 40, 'AC_USER_CREATE', '2026-07-15 00:22:24', '2026-07-14 22:22:24', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Enregistrement  effectué', 'Enregistrement  effectué', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 6, 'user', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1553, '1553', NULL, 1, '2026-07-15 00:22:24', '2026-07-15 00:22:24', 40, 'AC_USER_NEW_PASSWORD', '2026-07-15 00:22:24', '2026-07-14 22:22:24', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Mot de passe modifié dans Dolibarr', 'Mot de passe modifié dans Dolibarr', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 6, 'user', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1554, '1554', NULL, 1, '2026-07-15 00:22:37', '2026-07-15 00:22:37', 40, 'AC_USER_MODIFY', '2026-07-15 00:22:37', '2026-07-14 22:22:37', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Enregistrement 6 modifié', 'Enregistrement 6 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 6, 'user', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1555, '1555', NULL, 1, '2026-07-15 00:22:58', '2026-07-15 00:22:58', 40, 'AC_USER_MODIFY', '2026-07-15 00:22:58', '2026-07-14 22:22:58', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Enregistrement 6 modifié', 'Enregistrement 6 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 6, 'user', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', NULL, NULL, NULL),
+(1556, '1556', NULL, 1, '2026-07-15 01:16:00', '2026-07-15 01:16:00', 40, 'AC_USER_MODIFY', '2026-07-15 01:16:00', '2026-07-14 23:16:00', 1, NULL, NULL, NULL, NULL, NULL, 0, 1, 0, 0, 'default', 0, -1, '', 0, 'Enregistrement 2 modifié', 'Enregistrement 2 modifié', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 2, 'user', '2a01:cb08:81a2:c400:d1d6:13f3:2293:5e21', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -3402,7 +3407,15 @@ INSERT INTO `llx_actioncomm_resources` (`rowid`, `fk_actioncomm`, `element_type`
 (1545, 1545, 'user', 1, '0', 0, 0),
 (1546, 1546, 'user', 1, '0', 0, 0),
 (1547, 1547, 'user', 1, '0', 0, 0),
-(1548, 1548, 'user', 1, '0', 0, 0);
+(1548, 1548, 'user', 1, '0', 0, 0),
+(1549, 1549, 'user', 1, '0', 0, 0),
+(1550, 1550, 'user', 1, '0', 0, 0),
+(1551, 1551, 'user', 1, '0', 0, 0),
+(1552, 1552, 'user', 1, '0', 0, 0),
+(1553, 1553, 'user', 1, '0', 0, 0),
+(1554, 1554, 'user', 1, '0', 0, 0),
+(1555, 1555, 'user', 1, '0', 0, 0),
+(1556, 1556, 'user', 1, '0', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -4404,9 +4417,6 @@ INSERT INTO `llx_const` (`rowid`, `name`, `entity`, `value`, `type`, `visible`, 
 (7, 'MAIN_UPLOAD_DOC', 1, '2048', 'chaine', 0, 'Max size for file upload (0 means no upload allowed)', '2026-07-11 10:34:46'),
 (8, 'MAIN_ENABLE_OVERWRITE_TRANSLATION', 1, '1', 'chaine', 0, 'Enable translation overwrite', '2026-07-11 10:34:46'),
 (9, 'MAIN_ENABLE_DEFAULT_VALUES', 1, '1', 'chaine', 0, 'Enable default value overwrite', '2026-07-11 10:34:46'),
-(11, 'MAIN_MAIL_SMTP_SERVER', 1, '', 'chaine', 0, 'Host or ip address for SMTP server', '2026-07-11 10:34:46'),
-(12, 'MAIN_MAIL_SMTP_PORT', 1, '', 'chaine', 0, 'Port for SMTP server', '2026-07-11 10:34:46'),
-(13, 'MAIN_MAIL_EMAIL_FROM', 1, 'robot@domain.com', 'chaine', 0, 'email emitter for Dolibarr automatic emails', '2026-07-11 10:34:46'),
 (14, 'MAIN_SIZE_LISTE_LIMIT', 1, '20', 'chaine', 0, 'Maximum length of lists', '2026-07-11 10:34:46'),
 (15, 'MAIN_SIZE_SHORTLIST_LIMIT', 1, '3', 'chaine', 0, 'Maximum length of short lists', '2026-07-11 10:34:46'),
 (16, 'MAIN_MENU_STANDARD', 1, 'eldy_menu.php', 'chaine', 0, 'Menu manager for internal users', '2026-07-11 10:34:46'),
@@ -4638,23 +4648,40 @@ INSERT INTO `llx_const` (`rowid`, `name`, `entity`, `value`, `type`, `visible`, 
 (295, 'MAIN_MODULE_DYBCCR', 1, '1', 'string', 0, '{\"authorid\":\"1\",\"ip\":\"2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5\",\"lastactivationversion\":\"1.0\"}', '2026-07-13 14:02:31'),
 (296, 'MAIN_MODULE_DYBCCR_APIS', 1, '1', 'chaine', 0, NULL, '2026-07-13 14:02:31'),
 (297, 'MAIN_MODULE_DYBCCR_ICON', 1, 'fa-file', 'chaine', 0, NULL, '2026-07-13 14:02:31'),
-(299, 'DYBCCR_DYBWEB_OPEN', 1, '1', 'chaine', 0, '', '2026-07-13 23:43:40'),
-(304, 'DYBCCR_DYBWEB_CLOSE_MESSAGE', 1, 'Message affiché lorsque DYBWEB est fermé ', 'chaine', 0, '', '2026-07-13 23:44:23'),
-(305, 'DYBCCR_DYBWEB_INFORMATION_MESSAGE', 1, 'message affiché en en-tête de DYBWEB sur dyb.ccrennes.bzh', 'chaine', 0, '', '2026-07-13 23:44:23'),
-(306, 'DYBCCR_DYBWEB_CURRENT_SEASON', 1, 'default value', 'chaine', 0, '', '2026-07-13 23:44:23'),
-(307, 'DYBCCR_DYBWEB_CURRENT_TOKEN', 1, 'default value', 'chaine', 0, '', '2026-07-13 23:44:23'),
 (308, 'MAIN_MODULE_HELLOASSOPAY', 1, '1', 'string', 0, '{\"authorid\":\"1\",\"ip\":\"2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5\",\"lastactivationversion\":\"1.0\"}', '2026-07-13 23:50:22'),
 (309, 'MAIN_MODULE_HELLOASSOPAY_ICON', 1, 'fa-file-o', 'chaine', 0, NULL, '2026-07-13 23:50:22'),
 (310, 'MAIN_IHM_PARAMS_REV', 1, '19', 'chaine', 0, '', '2026-07-13 23:50:22'),
-(329, 'HELLOASSOPAY_BASEURL', 1, 'https://api.helloasso-sandbox.com', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(330, 'HELLOASSOPAY_CLIENT_ID', 1, '06c69c161781420aa52aa2ac47297c4e', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(331, 'HELLOASSOPAY_CLIENT_SECRET', 1, 'dolcrypt:AES-256-CTR:452b3549c8b308a0:1JnvXJ2z911/9EgO4HwsqxZYi/HygX9V5x363WIRaGw=', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(332, 'HELLOASSOPAY_ORGANISM_SLUR', 1, 'dhagpo-test', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(333, 'HELLOASSO_PAYMENTMODE', 1, '109', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(334, 'HELLOASSO_BANK_ACCOUNT_FOR_PAYMENTS', 1, '1', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(335, 'HELLOASSO_URL_AFTER_PAYMENT', 1, 'default value', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(336, 'HELLOASSO_DOLIKEY_FOR_PAYMENTCREATE', 1, 'default value', 'chaine', 0, '', '2026-07-13 23:53:51'),
-(337, 'HELLOASSO_LIBELLE_DESIGNATION', 1, 'default value', 'chaine', 0, '', '2026-07-13 23:53:51');
+(342, 'HELLOASSOPAY_BASEURL', 1, 'https://api.helloasso-sandbox.com', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(343, 'HELLOASSOPAY_CLIENT_ID', 1, '06c69c161781420aa52aa2ac47297c4e', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(344, 'HELLOASSOPAY_CLIENT_SECRET', 1, 'dolcrypt:AES-256-CTR:f843740ebb34d9fe:u8h9Zb0EKltItuFNJET46kg40xzaswH4Nr1sKOKZzhw=', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(345, 'HELLOASSOPAY_ORGANISM_SLUR', 1, 'dhagpo-test', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(346, 'HELLOASSO_PAYMENTMODE', 1, '109', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(347, 'HELLOASSO_BANK_ACCOUNT_FOR_PAYMENTS', 1, '1', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(348, 'HELLOASSO_URL_AFTER_PAYMENT', 1, 'https://dyb.ccrennes.bzh//dybweb', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(349, 'HELLOASSO_DOLIKEY_FOR_PAYMENTCREATE', 1, 'cleAPI_DYBWEB', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(350, 'HELLOASSO_CHECKOUT_EMAIL', 1, 'd.boulore@orange.fr', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(351, 'HELLOASSO_CHECKOUT_FROMEMAIL', 1, 'd.boulore@orange.fr', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(352, 'HELLOASSO_LIBELLE_DESIGNATION', 1, 'Paiement HelloAsso Checkout', 'chaine', 0, '', '2026-07-14 22:14:34'),
+(360, 'DYBCCR_DYBWEB_CURRENT_TOKEN', 1, 'cleAPI_DYBWEB', 'chaine', 0, '', '2026-07-14 22:20:40'),
+(361, 'DYBCCR_DYBWEB_CLOSE_MESSAGE', 1, 'Message affiché lorsque DYBWEB est fermé ', 'chaine', 0, '', '2026-07-14 23:19:58'),
+(362, 'DYBCCR_DYBWEB_INFORMATION_MESSAGE', 1, 'message affiché en en-tête de DYBWEB sur dyb.ccrennes.bzh', 'chaine', 0, '', '2026-07-14 23:19:58'),
+(363, 'DYBCCR_DYBWEB_CURRENT_SEASON', 1, '7', 'chaine', 0, '', '2026-07-14 23:19:58'),
+(412, 'MAIN_DISABLE_ALL_MAILS', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(413, 'MAIN_MAIL_ENABLED_USER_DEST_SELECT', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(414, 'MAIN_MAIL_NO_WITH_TO_SELECTED', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(415, 'MAIN_MAIL_SENDMODE', 1, 'smtps', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(416, 'MAIN_MAIL_SMTP_PORT', 1, '465', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(417, 'MAIN_MAIL_SMTP_SERVER', 1, 'smtp.mail.ovh.net', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(418, 'MAIN_MAIL_SMTPS_ID', 1, 'robot@ccrennes.bzh', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(419, 'MAIN_MAIL_SMTPS_PW', 1, 'dolcrypt:AES-256-CTR:344b55237383d6d2:yFmR28BtqK8CCIdttRqKuq/gMPSjQ0zQHtQowVWi', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(420, 'MAIN_MAIL_SMTPS_AUTH_TYPE', 1, 'LOGIN', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(421, 'MAIN_MAIL_EMAIL_TLS', 1, '1', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(422, 'MAIN_MAIL_EMAIL_STARTTLS', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(423, 'MAIN_MAIL_EMAIL_SMTP_ALLOW_SELF_SIGNED', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(424, 'MAIN_MAIL_EMAIL_DKIM_ENABLED', 1, '0', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(425, 'MAIN_MAIL_EMAIL_FROM', 1, 'robot@ccrennes.bzh', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(426, 'MAIN_MAIL_ERRORS_TO', 1, 'robot@ccrennes.bzh', 'chaine', 0, '', '2026-07-15 21:52:19'),
+(427, 'MAIN_MAIL_DEFAULT_FROMTYPE', 1, 'user', 'chaine', 0, '', '2026-07-15 21:52:19');
 
 -- --------------------------------------------------------
 
@@ -5190,9 +5217,11 @@ CREATE TABLE `llx_c_civility` (
 INSERT INTO `llx_c_civility` (`rowid`, `code`, `label`, `active`, `module`) VALUES
 (1, 'MME', 'Madame', 1, NULL),
 (2, 'MR', 'Monsieur', 1, NULL),
-(3, 'MLE', 'Mademoiselle', 1, NULL),
-(4, 'MTRE', 'Maître', 1, NULL),
-(5, 'DR', 'Docteur', 1, NULL);
+(3, 'MLE', 'Mademoiselle', 0, NULL),
+(4, 'MTRE', 'Maître', 0, NULL),
+(5, 'DR', 'Docteur', 0, NULL),
+(6, 'NSP', 'Non spécifié', 1, NULL),
+(7, 'AUT', 'Autre', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -15271,6 +15300,14 @@ CREATE TABLE `llx_overwrite_trans` (
   `transvalue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Déchargement des données de la table `llx_overwrite_trans`
+--
+
+INSERT INTO `llx_overwrite_trans` (`rowid`, `entity`, `lang`, `transkey`, `transvalue`) VALUES
+(1, 1, 'fr_FR', 'CivilityMME', 'Femme'),
+(4, 1, 'fr_FR', 'CivilityMR', 'Homme');
+
 -- --------------------------------------------------------
 
 --
@@ -16950,56 +16987,56 @@ CREATE TABLE `llx_product_extrafields` (
 --
 
 INSERT INTO `llx_product_extrafields` (`rowid`, `tms`, `fk_object`, `import_key`, `type_domaine`, `type_activite`, `act_ouvertdyb`) VALUES
-(1, '2026-07-13 23:38:14', 1, NULL, '0', '1', 1),
-(2, '2026-07-13 23:37:34', 2, NULL, '0', '1', 1),
-(3, '2026-07-13 23:37:34', 3, NULL, '0', '1', 1),
-(4, '2026-07-13 08:41:09', 4, NULL, '0', '5', NULL),
-(5, '2026-07-13 08:41:30', 5, NULL, '0', '6', NULL),
-(6, '2026-07-13 08:41:43', 6, NULL, '0', '1', NULL),
-(7, '2026-07-13 23:37:34', 7, NULL, '0', '1', 1),
-(8, '2026-07-13 23:37:34', 8, NULL, '0', '1', 1),
-(9, '2026-07-13 23:37:34', 9, NULL, '0', '1', 1),
-(10, '2026-07-13 23:37:34', 10, NULL, '0', '3', 1),
-(11, '2026-07-13 08:46:06', 11, NULL, '0', '7', NULL),
-(12, '2026-07-13 23:37:34', 12, NULL, '0', '1', 1),
-(13, '2026-07-13 23:37:34', 13, NULL, '0', '1', 1),
-(14, '2026-07-13 23:37:34', 14, NULL, '0', '1', 1),
-(15, '2026-07-13 23:37:34', 15, NULL, '0', '1', 1),
+(1, '2026-07-14 22:11:26', 1, NULL, '9', '1', 1),
+(2, '2026-07-14 22:10:42', 2, NULL, '9', '1', 1),
+(3, '2026-07-14 22:10:42', 3, NULL, '9', '1', 1),
+(4, '2026-07-14 22:10:42', 4, NULL, '9', '5', NULL),
+(5, '2026-07-14 22:10:42', 5, NULL, '9', '6', NULL),
+(6, '2026-07-14 22:10:42', 6, NULL, '9', '1', NULL),
+(7, '2026-07-14 22:04:23', 7, NULL, '8', '1', 1),
+(8, '2026-07-14 22:04:23', 8, NULL, '8', '1', 1),
+(9, '2026-07-14 22:04:23', 9, NULL, '8', '1', 1),
+(10, '2026-07-14 22:05:18', 10, NULL, '10', '3', 1),
+(11, '2026-07-14 22:15:04', 11, NULL, '11', '7', NULL),
+(12, '2026-07-14 22:06:04', 12, NULL, '3', '1', 1),
+(13, '2026-07-14 22:06:04', 13, NULL, '3', '1', 1),
+(14, '2026-07-14 22:06:04', 14, NULL, '3', '1', 1),
+(15, '2026-07-14 22:06:04', 15, NULL, '3', '1', 1),
 (16, '2026-07-13 23:37:34', 16, NULL, '8', '1', 1),
-(17, '2026-07-13 23:37:34', 17, NULL, '0', '1', 1),
-(18, '2026-07-13 23:37:34', 18, NULL, '0', '1', 1),
-(19, '2026-07-13 23:40:09', 19, NULL, '0', '1', 1),
-(20, '2026-07-13 23:40:09', 20, NULL, '0', '1', 1),
-(21, '2026-07-13 23:40:09', 21, NULL, '0', '1', 1),
-(22, '2026-07-13 23:40:09', 22, NULL, '0', '1', 1),
-(23, '2026-07-13 23:40:09', 23, NULL, '0', '1', 1),
-(24, '2026-07-13 08:49:22', 24, NULL, '0', '1', NULL),
-(25, '2026-07-13 08:49:33', 25, NULL, '0', '1', NULL),
-(26, '2026-07-13 23:40:09', 26, NULL, '0', '1', 1),
-(27, '2026-07-13 23:40:09', 27, NULL, '0', '1', 1),
-(28, '2026-07-13 08:50:01', 28, NULL, '0', '1', NULL),
-(29, '2026-07-13 23:40:09', 29, NULL, '0', '1', 1),
-(30, '2026-07-13 23:40:09', 30, NULL, '0', '1', 1),
-(31, '2026-07-13 08:50:31', 31, NULL, '0', '1', NULL),
-(32, '2026-07-13 23:40:09', 32, NULL, '0', '1', 1),
-(33, '2026-07-13 23:40:09', 33, NULL, '0', '1', 1),
-(34, '2026-07-13 23:40:09', 34, NULL, '0', '1', 1),
-(35, '2026-07-13 23:40:09', 35, NULL, '0', '1', 1),
-(36, '2026-07-13 23:40:09', 36, NULL, '0', '1', 1),
-(37, '2026-07-13 23:40:09', 37, NULL, '0', '1', 1),
-(38, '2026-07-13 23:40:09', 38, NULL, '0', '1', 1),
-(39, '2026-07-13 08:52:36', 39, NULL, '0', '1', NULL),
-(40, '2026-07-13 08:52:45', 40, NULL, '0', '1', NULL),
-(41, '2026-07-13 08:52:54', 41, NULL, '0', '1', NULL),
-(42, '2026-07-13 08:53:05', 42, NULL, '0', '1', NULL),
-(43, '2026-07-13 08:53:15', 43, NULL, '0', '1', NULL),
-(44, '2026-07-13 08:53:24', 44, NULL, '0', '1', NULL),
-(45, '2026-07-13 08:53:32', 45, NULL, '0', '1', NULL),
-(46, '2026-07-13 08:53:41', 46, NULL, '0', '1', NULL),
-(47, '2026-07-13 08:53:50', 47, NULL, '0', '1', NULL),
-(48, '2026-07-13 08:54:00', 48, NULL, '0', '1', NULL),
-(49, '2026-07-13 23:37:34', 49, NULL, '0', '3', 1),
-(50, '2026-07-13 23:37:34', 50, NULL, '0', '3', 1);
+(17, '2026-07-14 22:04:23', 17, NULL, '8', '1', 1),
+(18, '2026-07-14 22:04:23', 18, NULL, '8', '1', 1),
+(19, '2026-07-14 22:04:23', 19, NULL, '8', '1', 1),
+(20, '2026-07-14 22:04:23', 20, NULL, '8', '1', 1),
+(21, '2026-07-14 22:04:23', 21, NULL, '8', '1', 1),
+(22, '2026-07-14 22:04:23', 22, NULL, '8', '1', 1),
+(23, '2026-07-14 22:04:23', 23, NULL, '8', '1', 1),
+(24, '2026-07-14 22:11:26', 24, NULL, '9', '1', NULL),
+(25, '2026-07-14 22:11:26', 25, NULL, '9', '1', NULL),
+(26, '2026-07-14 22:06:39', 26, NULL, '4', '1', 1),
+(27, '2026-07-14 22:06:39', 27, NULL, '4', '1', 1),
+(28, '2026-07-14 22:07:01', 28, NULL, '4', '1', NULL),
+(29, '2026-07-14 22:07:58', 29, NULL, '1', '1', 1),
+(30, '2026-07-14 22:07:58', 30, NULL, '1', '1', 1),
+(31, '2026-07-14 22:07:58', 31, NULL, '1', '1', NULL),
+(32, '2026-07-14 22:07:58', 32, NULL, '1', '1', 1),
+(33, '2026-07-14 22:07:58', 33, NULL, '1', '1', 1),
+(34, '2026-07-14 22:07:58', 34, NULL, '1', '1', 1),
+(35, '2026-07-14 22:07:58', 35, NULL, '1', '1', 1),
+(36, '2026-07-14 22:07:58', 36, NULL, '1', '1', 1),
+(37, '2026-07-14 22:07:58', 37, NULL, '1', '1', 1),
+(38, '2026-07-14 22:07:58', 38, NULL, '1', '1', 1),
+(39, '2026-07-14 22:07:58', 39, NULL, '1', '1', NULL),
+(40, '2026-07-14 22:07:58', 40, NULL, '1', '1', NULL),
+(41, '2026-07-14 22:07:58', 41, NULL, '1', '1', NULL),
+(42, '2026-07-14 22:08:39', 42, NULL, '2', '1', NULL),
+(43, '2026-07-14 22:08:39', 43, NULL, '2', '1', NULL),
+(44, '2026-07-14 22:08:39', 44, NULL, '2', '1', NULL),
+(45, '2026-07-14 22:08:39', 45, NULL, '2', '1', NULL),
+(46, '2026-07-14 22:11:46', 46, NULL, '1', '1', NULL),
+(47, '2026-07-14 22:11:46', 47, NULL, '1', '1', NULL),
+(48, '2026-07-14 22:08:39', 48, NULL, '2', '1', NULL),
+(49, '2026-07-14 22:05:18', 49, NULL, '10', '3', 1),
+(50, '2026-07-14 22:05:18', 50, NULL, '10', '3', 1);
 
 -- --------------------------------------------------------
 
@@ -19548,11 +19585,12 @@ CREATE TABLE `llx_user` (
 --
 
 INSERT INTO `llx_user` (`rowid`, `entity`, `ref_employee`, `ref_ext`, `admin`, `employee`, `fk_establishment`, `datec`, `tms`, `fk_user_creat`, `fk_user_modif`, `login`, `pass_encoding`, `pass`, `pass_crypted`, `pass_temp`, `api_key`, `gender`, `civility`, `lastname`, `firstname`, `address`, `zip`, `town`, `fk_state`, `fk_country`, `birth`, `birth_place`, `job`, `office_phone`, `office_fax`, `user_mobile`, `personal_mobile`, `email`, `personal_email`, `email_oauth2`, `signature`, `socialnetworks`, `fk_soc`, `fk_socpeople`, `fk_member`, `fk_user`, `fk_user_expense_validator`, `fk_user_holiday_validator`, `national_registration_number`, `idpers1`, `idpers2`, `idpers3`, `note_public`, `note_private`, `model_pdf`, `last_main_doc`, `datelastlogin`, `datepreviouslogin`, `datelastpassvalidation`, `datestartvalidity`, `dateendvalidity`, `flagdelsessionsbefore`, `iplastlogin`, `ippreviouslogin`, `ldap_sid`, `openid`, `statut`, `photo`, `lang`, `color`, `barcode`, `fk_barcode_type`, `accountancy_code_user_general`, `accountancy_code`, `nb_holiday`, `thm`, `tjm`, `access_hours`, `salary`, `salaryextra`, `dateemployment`, `dateemploymentend`, `weeklyhours`, `import_key`, `default_range`, `default_c_exp_tax_cat`, `fk_warehouse`) VALUES
-(1, 0, '', NULL, 1, 1, NULL, '2026-07-11 12:35:11', '2026-07-11 10:35:11', 0, NULL, 'admin', NULL, NULL, '$2y$10$9udM4vwi3dIX3ocFiItr7uVZYlMnU.InITDqmIMfEOv4g3AcTg/c.', NULL, NULL, '', '', 'SuperAdmin', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, '2026-07-14 01:36:14', '2026-07-13 14:59:44', '2026-07-11 12:35:11', NULL, NULL, '2026-07-11 10:35:06', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', '2a01:cb08:81a2:c400:6dae:ce09:5d06:37d5', '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(2, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:01:04', '2026-07-13 13:01:04', 1, 1, 'dybweb', NULL, NULL, '$2y$10$cTsamDNtNCfKxrk4UKb5VuJO2RqwJeHpiDseKn91nu7CVwR7DEMay', NULL, 'dolcrypt:AES-256-CTR:10fbb3f05469219f:MFtDXbn0Z3GSqxZPLA==', NULL, '', 'DYBWEB', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:01:04', NULL, NULL, '2026-07-13 13:00:59', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(1, 0, '', NULL, 1, 1, NULL, '2026-07-11 12:35:11', '2026-07-11 10:35:11', 0, NULL, 'admin', NULL, NULL, '$2y$10$9udM4vwi3dIX3ocFiItr7uVZYlMnU.InITDqmIMfEOv4g3AcTg/c.', NULL, NULL, '', '', 'SuperAdmin', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, '2026-07-15 23:35:24', '2026-07-15 01:19:44', '2026-07-11 12:35:11', NULL, NULL, '2026-07-11 10:35:06', '2a01:cb08:81a2:c400:d1d6:13f3:2293:5e21', '2a01:cb08:81a2:c400:d1d6:13f3:2293:5e21', '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(2, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:01:04', '2026-07-14 23:16:00', 1, 1, 'dybweb', NULL, NULL, '$2y$10$cTsamDNtNCfKxrk4UKb5VuJO2RqwJeHpiDseKn91nu7CVwR7DEMay', NULL, 'dolcrypt:AES-256-CTR:10fbb3f05469219f:MFtDXbn0Z3GSqxZPLA==', NULL, '', 'DYBWEB', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:01:04', NULL, NULL, '2026-07-13 13:00:59', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (3, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:34:17', '2026-07-13 13:34:17', 1, 1, 'patrick', NULL, NULL, '$2y$10$v54uJnGdZ91TVIOtMLGV7Oe6iPyVubR46vouH2aAfcm9W7.qi4DBa', NULL, NULL, NULL, '', 'patrick', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:34:17', NULL, NULL, '2026-07-13 13:34:12', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:34:48', '2026-07-13 13:34:48', 1, 1, 'laetitia', NULL, NULL, '$2y$10$uyvlUmJjEex8C3pTSNHFp.2LlzSQRSTGkGn.FY.bmMl8kaJTsq00O', NULL, NULL, NULL, '', 'laetitia', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:34:48', NULL, NULL, '2026-07-13 13:34:43', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:35:13', '2026-07-13 13:35:13', 1, 1, 'philippe', NULL, NULL, '$2y$10$DwDDxCcM2vf4CAJNvxMxnux0SL.nkv4r79yusMGKsr9Qa4UeRetU.', NULL, 'dolcrypt:AES-256-CTR:10fbb3f05469219f:N05EeJDfSF2ihSh6HjQ=', NULL, '', 'philippe', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:35:13', NULL, NULL, '2026-07-13 13:35:08', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(5, 1, '', NULL, 0, 1, NULL, '2026-07-13 15:35:13', '2026-07-13 13:35:13', 1, 1, 'philippe', NULL, NULL, '$2y$10$DwDDxCcM2vf4CAJNvxMxnux0SL.nkv4r79yusMGKsr9Qa4UeRetU.', NULL, 'dolcrypt:AES-256-CTR:10fbb3f05469219f:N05EeJDfSF2ihSh6HjQ=', NULL, '', 'philippe', '', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', 'null', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-13 15:35:13', NULL, NULL, '2026-07-13 13:35:08', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 1, '', NULL, 1, 1, NULL, '2026-07-15 00:22:24', '2026-07-14 22:22:58', 1, 1, 'arnaud', NULL, NULL, '$2y$10$Wr1DLMrhgmK7Zku5y2/eluK.f0VhUn2m5kCOww4SOvuuzfsb4GXzu', NULL, NULL, NULL, '', 'Malavoir', 'Arnaud', '', '', '', NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', NULL, '', '[]', NULL, NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, NULL, '', '', NULL, NULL, NULL, NULL, '2026-07-15 00:22:24', NULL, NULL, '2026-07-14 22:22:19', NULL, NULL, '', NULL, 1, NULL, NULL, '', NULL, 0, '', '', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -19952,7 +19990,86 @@ INSERT INTO `llx_user_rights` (`rowid`, `entity`, `fk_user`, `fk_id`) VALUES
 (201, 1, 2, 2610),
 (202, 1, 2, 50000001),
 (203, 1, 2, 50000002),
-(204, 1, 2, 50000003);
+(204, 1, 2, 50000003),
+(220, 1, 6, 11),
+(221, 1, 6, 12),
+(222, 1, 6, 13),
+(223, 1, 6, 14),
+(224, 1, 6, 15),
+(225, 1, 6, 16),
+(226, 1, 6, 19),
+(227, 1, 6, 31),
+(228, 1, 6, 32),
+(229, 1, 6, 33),
+(230, 1, 6, 34),
+(231, 1, 6, 35),
+(232, 1, 6, 36),
+(233, 1, 6, 38),
+(234, 1, 6, 39),
+(235, 1, 6, 111),
+(236, 1, 6, 112),
+(237, 1, 6, 113),
+(238, 1, 6, 114),
+(239, 1, 6, 115),
+(240, 1, 6, 116),
+(241, 1, 6, 117),
+(242, 1, 6, 121),
+(243, 1, 6, 122),
+(244, 1, 6, 125),
+(245, 1, 6, 126),
+(246, 1, 6, 130),
+(247, 1, 6, 221),
+(248, 1, 6, 222),
+(249, 1, 6, 223),
+(250, 1, 6, 229),
+(251, 1, 6, 237),
+(252, 1, 6, 238),
+(253, 1, 6, 239),
+(254, 1, 6, 251),
+(255, 1, 6, 252),
+(256, 1, 6, 253),
+(257, 1, 6, 254),
+(258, 1, 6, 255),
+(259, 1, 6, 256),
+(260, 1, 6, 262),
+(261, 1, 6, 281),
+(262, 1, 6, 282),
+(263, 1, 6, 283),
+(264, 1, 6, 286),
+(265, 1, 6, 341),
+(266, 1, 6, 342),
+(267, 1, 6, 343),
+(268, 1, 6, 344),
+(269, 1, 6, 351),
+(270, 1, 6, 352),
+(271, 1, 6, 353),
+(272, 1, 6, 354),
+(273, 1, 6, 358),
+(274, 1, 6, 531),
+(275, 1, 6, 532),
+(276, 1, 6, 533),
+(277, 1, 6, 534),
+(278, 1, 6, 535),
+(279, 1, 6, 538),
+(280, 1, 6, 1201),
+(281, 1, 6, 1202),
+(282, 1, 6, 1251),
+(283, 1, 6, 1321),
+(284, 1, 6, 1322),
+(285, 1, 6, 2401),
+(286, 1, 6, 2402),
+(287, 1, 6, 2403),
+(288, 1, 6, 2411),
+(289, 1, 6, 2412),
+(290, 1, 6, 2413),
+(291, 1, 6, 2414),
+(292, 1, 6, 2610),
+(293, 1, 6, 50000001),
+(294, 1, 6, 50000002),
+(295, 1, 6, 50000003),
+(296, 1, 6, 50010001),
+(297, 1, 6, 50010002),
+(298, 1, 6, 50010003);
 
 --
 -- Index pour les tables déchargées
@@ -22185,7 +22302,7 @@ ALTER TABLE `llx_accounting_system`
 -- AUTO_INCREMENT pour la table `llx_actioncomm`
 --
 ALTER TABLE `llx_actioncomm`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1549;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1557;
 
 --
 -- AUTO_INCREMENT pour la table `llx_actioncomm_extrafields`
@@ -22203,7 +22320,7 @@ ALTER TABLE `llx_actioncomm_reminder`
 -- AUTO_INCREMENT pour la table `llx_actioncomm_resources`
 --
 ALTER TABLE `llx_actioncomm_resources`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1549;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1557;
 
 --
 -- AUTO_INCREMENT pour la table `llx_adherent`
@@ -22383,7 +22500,7 @@ ALTER TABLE `llx_comment`
 -- AUTO_INCREMENT pour la table `llx_const`
 --
 ALTER TABLE `llx_const`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=338;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=428;
 
 --
 -- AUTO_INCREMENT pour la table `llx_contrat`
@@ -22443,7 +22560,7 @@ ALTER TABLE `llx_c_chargesociales`
 -- AUTO_INCREMENT pour la table `llx_c_civility`
 --
 ALTER TABLE `llx_c_civility`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `llx_c_departements`
@@ -23127,7 +23244,7 @@ ALTER TABLE `llx_onlinesignature`
 -- AUTO_INCREMENT pour la table `llx_overwrite_trans`
 --
 ALTER TABLE `llx_overwrite_trans`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `llx_paiement`
@@ -23595,7 +23712,7 @@ ALTER TABLE `llx_tva`
 -- AUTO_INCREMENT pour la table `llx_user`
 --
 ALTER TABLE `llx_user`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT pour la table `llx_usergroup`
@@ -23649,7 +23766,7 @@ ALTER TABLE `llx_user_rib`
 -- AUTO_INCREMENT pour la table `llx_user_rights`
 --
 ALTER TABLE `llx_user_rights`
-  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `rowid` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=299;
 
 --
 -- Contraintes pour les tables déchargées

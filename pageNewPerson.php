@@ -45,7 +45,7 @@ require_once DOL_DOCUMENT_ROOT.'/societe/class/societe.class.php';
  * @var User      $user
  */
 
-$langs->loadLangs(array("dybccr@dybccr"));
+$langs->loadLangs(array("dybccr@dybccr", "dict"));
 
 // ---- Paramètres du formulaire ----
 $action     = GETPOST('action', 'aZ09');
@@ -116,11 +116,14 @@ if ($action === 'save') {
 
 // ---- Chargement des civilités ----
 $civilities = array();
-$sqlCiv = "SELECT rowid, label FROM ".MAIN_DB_PREFIX."c_civility WHERE active = 1 ORDER BY label ASC";
+$sqlCiv = "SELECT rowid, code, label FROM ".MAIN_DB_PREFIX."c_civility WHERE active = 1 ORDER BY label ASC";
 $resCiv = $db->query($sqlCiv);
 if ($resCiv) {
 	while ($obj = $db->fetch_object($resCiv)) {
-		$civilities[] = array('rowid' => (int) $obj->rowid, 'label' => $obj->label);
+		// Si une traduction existe, on l'utilise, sinon on garde le libellé brut (même logique que Form::select_civility)
+		$transKey = 'Civility'.$obj->code;
+		$civLabel = ($langs->trans($transKey) !== $transKey) ? $langs->trans($transKey) : $obj->label;
+		$civilities[] = array('rowid' => (int) $obj->rowid, 'label' => $civLabel);
 	}
 }
 

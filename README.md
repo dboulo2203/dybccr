@@ -1,3 +1,5 @@
+DYB V1.0.1
+
 # Documentation utilisateur DYBCCR (dybuser)
 
 DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
@@ -20,6 +22,40 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
   - Le programme vérifie que l'email n'est pas déjà utilisé dans la base de données
   - Le nom et le prénom ne peuvent comporter des espaces, remplacez par des -
 
+## En tant que dybuser, je veux modifier les informations d'identité d'un adhérent
+
+- Rechercher l'adhérent comme indiqué ci-dessus,
+- dans la barre d'identité, Cliquer sur l'icone 3-points, puis éditer,
+- Modifier et Sauver
+
+## en tant que dybuser, je souhaite déclarer un adhérent comme enfant d'un autre adhérent
+
+- Dans Dolibarr, Tiers, rechercher enfant
+- modifier l'attribut 'Maison mère', Choisir le parent, Sauver
+
+## En tant que dybuser, je veux créer une nouvelle facture pour un adhérent
+
+- Rechercher l'adhérent comme indiqué ci-dessus,
+- dans la barre des factures d'inscription, Cliquer sur l'icone 3-points, Créer une facture,
+- Saisir les informations de la facture et Sauver
+
+## En tant que dybuser, je veux enregistrer le paiement d'un adhérent (modifier une facture)
+
+- Rechercher l'adhérent comme indiqué ci-dessus,
+- Dans la page de l'adhérent, retrouver la facture à payer, Noter que l'id de la facture est affiché dans la colonne référence,
+  entre parenthèses.
+- Pour enregistrer un paiement, il faut que la facture soit en statut Brouillon ou Validée.
+- Cliquer sur 3points puis éditer,
+- Cliquer sur Ajouter paiement pour créer un nouveau paiement. Le programme propose la somme correspondant au reste à payer.
+- Il n'est pas possible que le total des paiement soit supérieur au montant de la facture.
+- Il est possible de ne payer qu'une partie du montant total.
+- Cliquer sur Sauver pour enregistrer
+
+## en tant que dybuser, je souhaite clôturer une facture à 0€
+
+- Dans Dolibarr, facture paiement,
+- ouvrir la facture, cliquer sur 'classer payée'.
+
 ## En tant que dybuser, je veux voir le suivi des inscriptions
 
 - Dans Dolibarr, module DYBccr ->suivi inscriptions,
@@ -31,6 +67,14 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
   - Il est possible de cliquer sur les noms des colonnes pour trier la liste
   - Cliquer sur le nom de l'adhérent ouvre la la page de l'adhérent.
 
+## En tant que dybuser, je veux voir les factures en attente de paiement
+
+- Dans Dolibarr, module DYBccr ->suivi inscriptions,
+- Choisir le filtre,
+  - Année : Choisir la saison culturelle souhaitée
+  - Statut de la facture : chosir brouillon ou validée
+  - Activité : Filtrer éventuellement par atelier
+
 ## Remarques sur le statut des factures.
 
 > - Les factures brouillon sont les factures en cours de modification
@@ -39,7 +83,7 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
 > - Les factures annulées sont en annulées suite à une modification. La raison est que les factures ne peuvent pas être supprimées. Le seul moyen de noter qu'une facture ne doit pas être conservée et comptée est de l'annuler.
 
 > - les factures payées par HelloAsso sont en statut payé
-> - Les factures Dybweb avec chix du moode de paiement chèque ouu autre sont en statut Brouillon.
+> - Les factures Dybweb avec choix du moode de paiement chèque ou autre sont en statut Brouillon.
 
 ## En tant que dybuser, je veux clôturer la caisse
 
@@ -55,6 +99,14 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
   4. Corriger éventuellement les écarts.
   5. imprimer le document de clôture de caisse et le joindre aux chèques, espèces, CB reçus.
   6. transmettre le tout à la comptabilité (YB, si j'ai bien compris).
+- Note :
+  - dans la liste des factures, un clic sur la référence de la facture permet d'afficher la page de la facture.
+
+## En tant que dybuser, je veux imprimer la clôture de caisse
+
+- Afficher la clôture de caisse comme indiqué ci-dessus,
+- Cliquer sur l'icone imprimante situé dans la barre d'outil Dolibarr à droite.
+- Utiliser les outils d'impression du navigateur.
 
 ## en tant que dybuser, je souhaite voir le reporting inscription,.
 
@@ -64,11 +116,6 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
   - par type d'activité, en nombre
   - par type de domaine, en nombre et montant
   - par ttype de paiement, en nombre et montant
-
-## en tant que dybuser, je souhaite clôturer une facture à 0€
-
-- Dans Dolibarr, facture paiement,
-- ouvrir la facture, cliquer sur 'classer payée'.
 
 # Documentation utilisateur DYBWeb
 

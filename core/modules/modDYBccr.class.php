@@ -500,7 +500,7 @@ class modDYBccr extends DolibarrModules
 		'langs'    => 'dybccr@dybccr',
 		'position' => 1000 + $r,
 		'enabled'  => 'isModEnabled("dybccr")',
-		'perms'    => '$user->admin',
+		'perms'    => '1',
 		'target'   => '',
 		'user'     => 0,
 	);
@@ -516,7 +516,7 @@ class modDYBccr extends DolibarrModules
 		'langs'    => 'dybccr@dybccr',
 		'position' => 1000 + $r,
 		'enabled'  => 'isModEnabled("dybccr")',
-		'perms'    => '$user->admin',
+		'perms'    => '1',
 		'target'   => '',
 		'user'     => 0,
 	);
@@ -532,7 +532,7 @@ class modDYBccr extends DolibarrModules
 		'langs'    => 'dybccr@dybccr',
 		'position' => 1000 + $r,
 		'enabled'  => 'isModEnabled("dybccr")',
-		'perms'    => '$user->admin',
+		'perms'    => '1',
 		'target'   => '',
 		'user'     => 0,
 	);
@@ -547,10 +547,25 @@ class modDYBccr extends DolibarrModules
 		'langs'    => 'dybccr@dybccr',
 		'position' => 1000 + $r,
 		'enabled'  => 'isModEnabled("dybccr")',
-		'perms'    => '$user->admin',
+		'perms'    => '1',
 		'target'   => '',
 		'user'     => 0,
 	);
+	// 	$this->menu[$r++] = array(
+	// 	'fk_menu'  => 'fk_mainmenu=dybccr',
+	// 	'type'     => 'left',
+	// 	'titre'    => 'Clôture de caisse imprime',
+	// 	'prefix'   => img_picto('', 'bill', 'class="pictofixedwidth valignmiddle paddingright"'),
+	// 	'mainmenu' => 'dybccr',
+	// 	'leftmenu' => 'dybccr_import_adhesions',
+	// 	'url'      => '/dybccr/pageCashRegisterMin.php',
+	// 	'langs'    => 'dybccr@dybccr',
+	// 	'position' => 1000 + $r,
+	// 	'enabled'  => 'isModEnabled("dybccr")',
+	// 	'perms'    => '1',
+	// 	'target'   => '',
+	// 	'user'     => 0,
+	// );
 
 	$this->menu[$r++] = array(
 		'fk_menu'  => 'fk_mainmenu=dybccr',
@@ -563,7 +578,7 @@ class modDYBccr extends DolibarrModules
 		'langs'    => 'dybccr@dybccr',
 		'position' => 1000 + $r,
 		'enabled'  => 'isModEnabled("dybccr")',
-		'perms'    => '$user->admin',
+		'perms'    => '1',
 		'target'   => '',
 		'user'     => 0,
 	);
