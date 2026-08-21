@@ -113,6 +113,7 @@ llxHeader('', 'Suivi des inscriptions', '', '', 0, 0, '', '', '', 'mod-dybccr pa
 print load_fiche_titre('Suivi des inscriptions', '', 'dybccr.png@dybccr');
 
 // ---- Formulaire de recherche ----
+print '<div style="border:1px solid #ccc;border-radius:4px;padding:10px 15px;margin-bottom:10px;">';
 print '<form method="post" action="'.$_SERVER['PHP_SELF'].'">';
 print '<input type="hidden" name="token" value="'.newToken().'">';
 print '<input type="hidden" name="action" value="search">';
@@ -166,6 +167,7 @@ print '</table>';
 print '<br>';
 print '<input type="submit" class="butAction" value="Rechercher">';
 print '</form>';
+print '</div>';
 
 // ---- Tableau des résultats ----
 if ($action === 'search' && $yearId > 0) {

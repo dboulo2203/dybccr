@@ -583,6 +583,22 @@ class modDYBccr extends DolibarrModules
 		'user'     => 0,
 	);
 
+	$this->menu[$r++] = array(
+		'fk_menu'  => 'fk_mainmenu=dybccr',
+		'type'     => 'left',
+		'titre'    => 'Reporting compta',
+		'prefix'   => img_picto('', 'bill', 'class="pictofixedwidth valignmiddle paddingright"'),
+		'mainmenu' => 'dybccr',
+		'leftmenu' => 'dybccr_import_adhesions',
+		'url'      => '/dybccr/pageReportingCompta.php',
+		'langs'    => 'dybccr@dybccr',
+		'position' => 1000 + $r,
+		'enabled'  => 'isModEnabled("dybccr")',
+		'perms'    => '1',
+		'target'   => '',
+		'user'     => 0,
+	);
+
 	
 	// $this->menu[$r++] = array(
     //     'fk_menu'      => 'fk_mainmenu=dybccr', // ou l'ID du menu parent

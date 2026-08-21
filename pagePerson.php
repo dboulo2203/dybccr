@@ -108,7 +108,7 @@ print '<button type="button" class="btn btn-sm btn-link p-0" data-bs-toggle="dro
 print '<i class="bi bi-three-dots-vertical"></i>';
 print '</button>';
 print '<ul class="dropdown-menu dropdown-menu-end">';
-print '<li><a class="dropdown-item" href="pageEditPerson.php?id='.((int) $socid).'">Éditer</a></li>';
+print '<li><a class="dropdown-item" href="pageEditPerson.php?id='.((int) $socid).'">Modifier</a></li>';
 print '</ul>';
 print '</div>';
 print '</div>';
@@ -213,7 +213,7 @@ if (!$resInv) {
 			print '<i class="bi bi-three-dots-vertical"></i>';
 			print '</button>';
 			print '<ul class="dropdown-menu dropdown-menu-end">';
-			print '<li><a class="dropdown-item dyb-edit-invoice" href="#" data-invoice-id="'.((int) $invoice->rowid).'">Éditer</a></li>';
+			print '<li><a class="dropdown-item dyb-edit-invoice" href="#" data-invoice-id="'.((int) $invoice->rowid).'">Modifier</a></li>';
 			print '</ul>';
 			print '</div>';
 		}
@@ -289,7 +289,6 @@ print '</div>';
 		link.addEventListener('click', async (e) => {
 			e.preventDefault();
 			try {
-				await ensureReferenceData();
 				await displayActionCreateInvoice(customer, async () => {
 					location.reload();
 				});

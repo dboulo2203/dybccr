@@ -128,6 +128,8 @@ print "<div class=\"fichehalfleft\">";
 
 
 
+print '<div style="border:1px solid #ccc;border-radius:4px;padding:10px 15px;margin-bottom:10px;">';
+
 print '<form method="get" name="statform" action="' . $_SERVER['PHP_SELF'] . '" >';
 
 	print '<input type="hidden" name="token" value="' . newToken() . '">';
@@ -195,6 +197,8 @@ print '<form method="get" name="statform" action="' . $_SERVER['PHP_SELF'] . '" 
 	print "</table>";
 
 print '</form>';
+
+print '</div>';
 
 
 

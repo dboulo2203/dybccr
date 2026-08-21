@@ -58,7 +58,7 @@ if (!in_array($tab, $allowedTabs, true)) {
 
 llxHeader('', 'Reporting', '', '', 0, 0, '', '', '', 'mod-dybccr page-reporting');
 
-print load_fiche_titre('Reporting', '', 'dybccr.png@dybccr');
+print load_fiche_titre('Reporting inscriptions', '', 'dybccr.png@dybccr');
 
 $head = array();
 $head[0] = array($_SERVER['PHP_SELF'].'?tab=activites', 'Activités (nb)', 'activites');
