@@ -209,7 +209,6 @@ FROM llx_facturedet AS fd
     JOIN llx_facture_extrafields AS fext ON fext.fk_object = f.rowid
  JOIN llx_societe AS s ON s.rowid = f.fk_soc
  JOIN llx_product AS p ON p.rowid = fd.fk_product
-  JOIN llx_facturedet_extrafields AS fde ON fde.fk_object = fd.rowid
   JOIN llx_c_yearexercice AS ye ON ye.rowid = fext.inv_culturalseason";
 		$sql .= " WHERE p.rowid = '".$this->db->escape($product_id)."'";
 		$sql .= " AND ye.rowid = '".$this->db->escape($year_id)."'";
@@ -244,7 +243,7 @@ FROM llx_facturedet AS fd
 		}
 
 		if (empty($list)) {
-			throw new RestException(404, 'No invoice lines found for product "'.$product_ref.'" and year "'.$year_label.'"');
+			throw new RestException(404, 'No invoice lines found for product "'.$product_id.'" and year "'.$year_id.'"');
 		}
 
 		return $list;

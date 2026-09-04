@@ -1,4 +1,4 @@
-DYB V1.0.1
+DYB V1.1.0
 
 # Documentation utilisateur DYBCCR (dybuser)
 
@@ -209,3 +209,18 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
 # documents projet
 
 [Présentation PowerPoint du projet](./img/Processus_inscription_présentation.pptx)
+
+------------------------------
+# Avancement projet 
+
+## DYB V1.1 DYBCCR
+- FIX : Supprimé tous les fichiers JS inutilisés
+- FIX : Supprimé le répeertoire d"intégration des fichiers YB
+- NEW : Ajouté un lien de paiement par HelloAsso dans la fenetre d'édition de la facture.
+- FiX : Corrigé le problème  de la version Firefox
+
+## DYB V1.1 DYBWEB
+
+# TODO
+- Supprimer pages PHP : pagedybjs, pagedybjs_2, pageCashregisterMin
+- Dans dolibarr, les calls de web service sont fait avec la clé web

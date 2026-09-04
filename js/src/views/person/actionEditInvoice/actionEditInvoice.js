@@ -4,6 +4,7 @@ import { loadProducts, getAllActiveProducts } from '../../../shared/appWSService
 import { setToDraftInvoice, validateInvoice, updateInvoiceHeader, addInvoiceLine, deleteInvoiceLine, createInvoicePayment, getInvoicePayments } from '../../../shared/appWSServices/dolibarrInvoicesServices.js';
 import { getFormattedCurrency } from '../../../shared/commonServices/commonFunctions.js';
 import { getSelectFromDatabaseList, getPaymentTypes } from '../../../shared/appWSServices/dolibarrListsServices.js';
+import { getConfigurationValue } from '../../../shared/commonServices/configurationService.js';
 
 /**
  * Display the edit invoice modal
@@ -14,7 +15,7 @@ import { getSelectFromDatabaseList, getPaymentTypes } from '../../../shared/appW
 export async function displayActionEditInvoice(invoice, customer, onSaveCallback) {
 
   const modalId = 'editInvoiceModal-' + Math.random().toString(36).substring(2, 9);
-  const currentSeason = invoice['array_options']?.['options_inv_culturalseason'] ?? '';
+  const currentSeason = ((invoice && invoice['array_options']) || {})['options_inv_culturalseason'] || '';
 
   const modalHtml = `
     <div class="modal fade" id="${modalId}" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
@@ -58,6 +59,12 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
               <div class="text-end small text-muted mt-1">
                 Reste à payer : <span id="${modalId}-remaining">0,00 €</span>
               </div>
+              <hr>
+              <div>
+                <a href="#" id="${modalId}-copy-hellopay" class="small">
+                  <i class="bi bi-clipboard me-1"></i>Copier le lien de paiement HelloAsso pour cette facture
+                </a>
+              </div>
             </div>
           </div>
           <div class="modal-footer">
@@ -94,12 +101,12 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
     const lines = (invoice['lines'] || []).map((l) => ({
       id: l.id,
       fk_product: l.fk_product,
-      desc: l.desc ?? l.product_label ?? '',
+      desc: l.desc || l.product_label || '',
       qty: Number(l.qty) || 1,
       subprice: Number(l.subprice) || 0,
     }));
     const payments = []; // nouveaux paiements uniquement
-    const existingPaidTotal = existingPayments.reduce((s, p) => s + Number(p.amount ?? 0), 0);
+    const existingPaidTotal = existingPayments.reduce((s, p) => s + Number(p.amount || 0), 0);
 
     const cleanup = (result) => {
       modal.hide();
@@ -114,6 +121,14 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
     const updateTotal = () => {
       document.getElementById(`${modalId}-total`).textContent = getFormattedCurrency(computeInvoiceTotal());
       document.getElementById(`${modalId}-remaining`).textContent = getFormattedCurrency(computeRemaining());
+      const helloPayLink = document.getElementById(`${modalId}-copy-hellopay`);
+      if (helloPayLink) {
+        const active = computeInvoiceTotal() > 0;
+        helloPayLink.classList.toggle('disabled', !active);
+        helloPayLink.setAttribute('aria-disabled', String(!active));
+        helloPayLink.style.pointerEvents = active ? '' : 'none';
+        helloPayLink.tabIndex = active ? 0 : -1;
+      }
     };
 
     const formatPaymentDate = (dateStr) => {
@@ -134,7 +149,7 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
         html += `<div class="d-flex gap-3 small text-muted border rounded px-2 py-1 bg-light">
           <span class="fw-semibold">${typeLabel}</span>
           <span>${formatPaymentDate(p.date)}</span>
-          <span class="flex-grow-1">${getFormattedCurrency(Number(p.amount ?? 0))}</span>
+          <span class="flex-grow-1">${getFormattedCurrency(Number(p.amount || 0))}</span>
           <span class="fst-italic">existant</span>
         </div>`;
       });
@@ -157,7 +172,7 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
       let html = '<div class="d-flex flex-column gap-2">';
       payments.forEach((p, i) => {
         html += `<div class="d-flex gap-2 align-items-center">
-          <select class="form-select form-select-sm" style="width:220px" id="${modalId}-ptype-${i}">${typeOptions(p.type?.id)}</select>
+          <select class="form-select form-select-sm" style="width:220px" id="${modalId}-ptype-${i}">${typeOptions(p.type ? p.type.id : undefined)}</select>
           <input type="number" class="form-control form-control-sm" style="width:120px" id="${modalId}-pamount-${i}" value="${p.amount}" min="0" step="0.01">
           <button type="button" class="btn btn-sm btn-outline-danger" id="${modalId}-pdel-${i}"><i class="bi bi-trash"></i></button>
         </div>`;
@@ -265,6 +280,35 @@ export async function displayActionEditInvoice(invoice, customer, onSaveCallback
       payments.push({ type: allTypes[0], amount: remaining });
       renderPayments();
       document.getElementById(`${modalId}-remaining`).textContent = getFormattedCurrency(computeRemaining());
+    });
+
+    // *** Copy HelloAsso payment link to clipboard
+    // wsUrlformel peut être relatif ou absolu : on retire /api/index.php/ puis on résout
+    // contre l'origine du serveur courant pour obtenir une URL absolue exploitable dans un navigateur.
+    const dolibarrRoot = (getConfigurationValue('wsUrlformel') || '')
+      .replace(/\/api\/index\.php\/?$/, '')
+      .replace(/\/$/, '');
+    const helloPayLink = document.getElementById(`${modalId}-copy-hellopay`);
+    helloPayLink.addEventListener('click', async (e) => {
+      e.preventDefault();
+      if (computeInvoiceTotal() <= 0) return;
+      const url = new URL(
+        `${dolibarrRoot}/custom/helloassopay/public/start.php?ref=${invoice.id}`,
+        window.location.origin,
+      ).href;
+      try {
+        await navigator.clipboard.writeText(url);
+      } catch {
+        const tmp = document.createElement('textarea');
+        tmp.value = url;
+        document.body.appendChild(tmp);
+        tmp.select();
+        document.execCommand('copy');
+        tmp.remove();
+      }
+      const original = helloPayLink.innerHTML;
+      helloPayLink.innerHTML = '<i class="bi bi-check2 me-1"></i>Lien copié dans le presse-papier';
+      setTimeout(() => { helloPayLink.innerHTML = original; }, 2000);
     });
 
     // *** Save invoice action

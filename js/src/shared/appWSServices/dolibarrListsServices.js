@@ -172,9 +172,9 @@ export async function loadTypedomainsTable() {
  */
 export function getYearExerciceLabel(id) {
   const base = getList('yearexercice');
-  if (!base) return id ?? '';
+  if (!base) return id || '';
   const found = base.find((o) => String(o['rowid']) === String(id));
-  return found?.['label'] ?? id ?? '';
+  return (found && found['label']) || id || '';
 }
 
 export async function getDolibarrStatus() {
@@ -377,7 +377,7 @@ export function getUserLoginFromId(searchedid) {
   const base = JSON.parse(basejson);
 
   const objFound = base.find((o) => o['id'] === searchedid);
-  return objFound?.login || null;
+  return (objFound && objFound.login) || null;
 
   // let foundIndex = Object.keys(base).indexOf(id);
   // let valeur = null;

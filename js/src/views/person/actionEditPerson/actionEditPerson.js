@@ -11,7 +11,7 @@ import { getSelectFromDatabaseList } from '../../../shared/appWSServices/dolibar
 export async function displayActionEditPerson(customer, onSaveCallback) {
 
   const modalId = 'editPersonModal-' + Math.random().toString(36).substring(2, 9);
-  const currentCivility = customer['array_options']?.['options_thi_civility'] ?? '';
+  const currentCivility = (customer['array_options'] || {})['options_thi_civility'] || '';
 
   const civilityOptions = getSelectFromDatabaseList('typecivilities', 'rowid', 'label', currentCivility);
 
@@ -36,18 +36,18 @@ export async function displayActionEditPerson(customer, onSaveCallback) {
                   </select>
                 </div>
               </div>
-              ${getEditField('Nom', `${modalId}-name`, customer['name'] ?? '')}
+              ${getEditField('Nom', `${modalId}-name`, customer['name'] || '')}
               <div class="form-group row mb-2">
                 <label class="fw-light col-sm-2">Email</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" value="${customer['email'] ?? ''}" disabled>
+                  <input type="text" class="form-control" value="${customer['email'] || ''}" disabled>
                 </div>
               </div>
-              ${getEditField('Téléphone', `${modalId}-phone`, customer['phone'] ?? '')}
-              ${getEditField('Adresse', `${modalId}-address`, customer['address'] ?? '')}
-              ${getEditField('Code postal', `${modalId}-zip`, customer['zip'] ?? '')}
-              ${getEditField('Ville', `${modalId}-town`, customer['town'] ?? '')}
-              ${getEditFieldDate('Date de naissance', `${modalId}-birthday`, dolibarrTimestampToDateInput(customer['array_options']?.['options_thi_birthday']))}
+              ${getEditField('Téléphone', `${modalId}-phone`, customer['phone'] || '')}
+              ${getEditField('Adresse', `${modalId}-address`, customer['address'] || '')}
+              ${getEditField('Code postal', `${modalId}-zip`, customer['zip'] || '')}
+              ${getEditField('Ville', `${modalId}-town`, customer['town'] || '')}
+              ${getEditFieldDate('Date de naissance', `${modalId}-birthday`, dolibarrTimestampToDateInput((customer['array_options'] || {})['options_thi_birthday']))}
             </form>
           </div>
           <div class="modal-footer">

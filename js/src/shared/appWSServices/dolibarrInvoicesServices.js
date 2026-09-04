@@ -17,7 +17,7 @@ export async function createInvoice(thirdpartyId, lines, invoiceOptions = {}) {
     body: JSON.stringify({
       socid: Number(thirdpartyId),
       array_options: {
-        options_inv_culturalseason: invoiceOptions.culturalseason ?? '',
+        options_inv_culturalseason: invoiceOptions.culturalseason || '',
       }
       ,
       lines: lines.map((line) => ({
@@ -245,7 +245,7 @@ export async function getAttendeesByProductAndYear(productId, yearId) {
   if (responsefr.ok) {
     const invoices = await responsefr.json();
     return invoices.filter((inv) =>
-      inv['lines']?.some((line) => String(line['fk_product']) === String(productId))
+      (inv['lines'] || []).some((line) => String(line['fk_product']) === String(productId))
     );
   } else if (responsefr.status === 404) {
     return [];
