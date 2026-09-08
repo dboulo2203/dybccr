@@ -158,7 +158,7 @@ print '<button type="button" class="btn btn-sm btn-link p-0" data-bs-toggle="dro
 print '<i class="bi bi-three-dots-vertical"></i>';
 print '</button>';
 print '<ul class="dropdown-menu dropdown-menu-end">';
-print '<li><a class="dropdown-item dyb-create-invoice" href="#">Créer une facture</a></li>';
+print '<li><a class="dropdown-item" href="'.DOL_URL_ROOT.'/custom/dybccr/pageCreateInvoice.php?socid='.((int) $socid).'">Créer une facture</a></li>';
 print '</ul>';
 print '</div>';
 print '</div>';
@@ -213,7 +213,7 @@ if (!$resInv) {
 			print '<i class="bi bi-three-dots-vertical"></i>';
 			print '</button>';
 			print '<ul class="dropdown-menu dropdown-menu-end">';
-			print '<li><a class="dropdown-item dyb-edit-invoice" href="#" data-invoice-id="'.((int) $invoice->rowid).'">Modifier</a></li>';
+			print '<li><a class="dropdown-item" href="'.DOL_URL_ROOT.'/custom/dybccr/pageEditInvoice.php?id='.((int) $invoice->rowid).'">Modifier</a></li>';
 			print '</ul>';
 			print '</div>';
 		}
@@ -247,58 +247,6 @@ if (!$resInv) {
 
 print '</div>';
 print '</div>';
-
-// ---- Édition et création de facture (modals réutilisés depuis js/src/views/person) ----
-?>
-<script type="module" nonce="<?php echo getNonce(); ?>">
-	import { displayActionEditInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/views/person/actionEditInvoice/actionEditInvoice.js';
-	import { displayActionCreateInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/views/person/actionCreateInvoice/actionCreateInvoice.js';
-	import { loadProducts } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrProductServices.js';
-	import { loadPaymentTypesTable, loadYearExerciceTable } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrListsServices.js';
-	import { getInvoice } from '<?php echo DOL_URL_ROOT; ?>/custom/dybccr/js/src/shared/appWSServices/dolibarrInvoicesServices.js';
-
-	sessionStorage.setItem('configuration', JSON.stringify({
-		wsUrlformel: '<?php echo DOL_URL_ROOT; ?>/api/index.php/',
-	}));
-
-	const customer = { id: <?php echo (int) $socid; ?>, name: <?php echo json_encode($person->nom); ?> };
-	let referenceDataLoaded = false;
-
-	async function ensureReferenceData() {
-		if (referenceDataLoaded) return;
-		await Promise.all([loadProducts(), loadPaymentTypesTable(), loadYearExerciceTable()]);
-		referenceDataLoaded = true;
-	}
-
-	document.querySelectorAll('.dyb-edit-invoice').forEach((link) => {
-		link.addEventListener('click', async (e) => {
-			e.preventDefault();
-			try {
-				await ensureReferenceData();
-				const invoice = await getInvoice(link.dataset.invoiceId);
-				await displayActionEditInvoice(invoice, customer, async () => {
-					location.reload();
-				});
-			} catch (error) {
-				alert(error.message || error);
-			}
-		});
-	});
-
-	document.querySelectorAll('.dyb-create-invoice').forEach((link) => {
-		link.addEventListener('click', async (e) => {
-			e.preventDefault();
-			try {
-				await displayActionCreateInvoice(customer, async () => {
-					location.reload();
-				});
-			} catch (error) {
-				alert(error.message || error);
-			}
-		});
-	});
-</script>
-<?php
 
 llxFooter();
 $db->close();

@@ -28,7 +28,8 @@ use Luracast\Restler\RestException;
  *   GET /api/index.php/dybccrapi/yearexercices
  *   GET /api/index.php/dybccrapi/yearexercice/{id}
  *   GET /api/index.php/dybccrapi/moduleparameters
- *   POST /api/index.php/dybccrapi/invoices/{id}/sendemail
+ *   POST /api/index.php/dybccrapi/invoicesendemail/{id}
+ *   POST /api/index.php/dybccrapi/invoices/save
  *
  * @access protected
  * @class  DolibarrApiAccess {@requires user,external}
@@ -383,6 +384,66 @@ FROM llx_facturedet AS fd
 			'sent_to'     => $sendto,
 			'subject'     => $subject,
 		);
+	}
+
+	// -----------------------------------------------------------------------
+	// Invoice: full save from the edit modal
+	// -----------------------------------------------------------------------
+
+	/**
+	 * Save a full invoice edit in a single call.
+	 *
+	 * Thin REST wrapper around DybccrInvoice::saveFull() (class/dybccrinvoice.class.php),
+	 * the same helper used by the in-session page pageEditInvoice.php. Server-side, native
+	 * Dolibarr objects (Facture, Paiement), one DB transaction:
+	 *   - set the invoice back to draft if it was validated
+	 *   - update the cultural season extrafield (inv_culturalseason)
+	 *   - lines: keep the unchanged ones, delete the removed ones, delete+recreate the modified
+	 *     ones (qty or subprice changed), create the new ones (no id)
+	 *   - revalidate the invoice
+	 *   - register the new payments (cheque issuer mandatory for CHQ)
+	 *
+	 * The whole operation runs in a single DB transaction: on any error nothing is persisted.
+	 *
+	 * Expected request body (the invoice structure):
+	 * {
+	 *   "id": 123,
+	 *   "culturalseason": "4",
+	 *   "lines": [
+	 *     { "id": 456, "fk_product": 12, "qty": 2, "subprice": 10.0, "desc": "..." },
+	 *     { "fk_product": 15, "qty": 1, "subprice": 5.0, "desc": "..." }
+	 *   ],
+	 *   "payments": [
+	 *     { "payment_type_id": 3, "amount": 25.0, "issuer": "Jean Dupont", "account_id": 1 }
+	 *   ]
+	 * }
+	 *
+	 * @param array $request_data   Invoice structure (see above)
+	 * @return array
+	 *
+	 * @url POST invoices/save
+	 * @throws RestException
+	 */
+	public function postInvoicessave($request_data = null)
+	{
+		$this->_checkAuthWrite();
+
+		if (is_object($request_data)) {
+			$request_data = (array) $request_data;
+		}
+		if (!is_array($request_data)) {
+			throw new RestException(400, 'Missing or invalid invoice structure in request body');
+		}
+
+		require_once DOL_DOCUMENT_ROOT.'/custom/dybccr/class/dybccrinvoice.class.php';
+
+		try {
+			$tool = new DybccrInvoice($this->db);
+			return $tool->saveFull(DolibarrApiAccess::$user, $request_data);
+		} catch (Exception $e) {
+			$code = $e->getCode();
+			throw new RestException(($code >= 400 && $code < 600) ? $code : 500, $e->getMessage());
+		}
 	}
 
 	// -----------------------------------------------------------------------

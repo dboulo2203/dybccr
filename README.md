@@ -216,8 +216,16 @@ DYBCCR a été créé afin de simplifier la gestion des inscriptions du CCR.
 ## DYB V1.1 DYBCCR
 - FIX : Supprimé tous les fichiers JS inutilisés
 - FIX : Supprimé le répeertoire d"intégration des fichiers YB
-- NEW : Ajouté un lien de paiement par HelloAsso dans la fenetre d'édition de la facture.
+facture.
 - FiX : Corrigé le problème  de la version Firefox
+- FIX : reprise des fenetres de DYB afin de ne plus utiliser les pages JS. Ne conserve que les composants.
+
+- NEW : Ajouté un lien de paiement par HelloAsso dans la fenetre d'édition de la facture
+- NEW : Suivi inscription : ajout du filtre par activité
+- NEW : SUivi inscription : modification du filtre par année, possibilité d'avoir toutes les années
+- NEW : page SUivi inscription : ajout d'une fonction d'export de la liste affichée
+- NEW page SUivi inscription : ajout d'une 1ère version de l'export d'une liste vers Brevo. 
+- NEW : reprise de la fonction de ccréation d'une inscription à partir de DYbWEB. Réintégrtion des fonctions dans l'API PHP.
 
 ## DYB V1.1 DYBWEB
 

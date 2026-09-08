@@ -130,6 +130,16 @@ $item->defaultFieldValue = 'default value';
 $item->fieldAttr['placeholder'] = 'A placeholder here';
 $item->helpText = 'Tooltip text';
 
+// ---- Section Brevo (export de listes de diffusion depuis pageRegistrationList.php) ----
+$formSetup->newItem('DYBCCR_BREVO_SECTION')->setAsTitle();
+
+$item = $formSetup->newItem('DYBCCR_BREVO_API_KEY');
+$item->setAsSecureKey();
+$item->fieldAttr['placeholder'] = 'xkeysib-...';
+
+$item = $formSetup->newItem('DYBCCR_BREVO_FOLDER_ID');
+$item->fieldAttr['placeholder'] = 'Ex. 1';
+
 // $item = $formSetup->newItem('DYBCCR_DYBWEB_CURRENT_TOKEN');
 // $item->defaultFieldValue = 'default value';
 // $item->fieldAttr['placeholder'] = 'A placeholder here';

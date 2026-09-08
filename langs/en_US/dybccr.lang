@@ -2,4 +2,6 @@ DYBCCR_DYBWEB_OPEN = Ouvrir l'accès à DYBWEB
 DYBCCR_DYBWEB_CLOSE_MESSAGE = Message affiché lorsque DYBWEB est fermé
 DYBCCR_DYBWEB_CURRENT_SEASON = Code (id) de la saison en cours d'inscription sur DYBWEB
 DYBCCR_DYBWEB_INFORMATION_MESSAGE :message affiché en en-tête de DYBWEB
+DYBCCR_BREVO_API_KEY = Clé API Brevo (v3, avec droit de gestion des contacts)
+DYBCCR_BREVO_FOLDER_ID = Identifiant (folderId) du dossier Brevo dans lequel créer les listes
 ModuleDYBccrName=Dyb CCR
